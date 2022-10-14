@@ -82,7 +82,18 @@ les éléments au clavier dans le menu déroulant
     - https://www.patterns.dev/posts/classic-design-patterns/
     - https://betterprogramming.pub/javascript-design-patterns-25f0faaaa15?gi=b5cecd9fc81
     - https://codingcompiler.com/javascript-design-patterns/
-- LINTER : https://www.synbioz.com/blog/tech/un-code-js-impeccable-grace-a-eslint
+- LINTER : https://www.synbioz
+
+## Outils d'accessibilitéstratégie de tests d'accessibilité holistique
+- 
+- Extensions Chrome:
+	- Wave Evaluation Tool (vérificateur d'accessibilité automatisé) ;
+	- aXe (vérificateur d'accessibilité automatisé) ;
+	- HeadingsMap.
+- TPG Colour Contrast Analyser + Eye Dropper
+- Lecteur d'écran NVDA (utilisateurs de PC uniquement), TalkBack (Android)
+
+.com/blog/tech/un-code-js-impeccable-grace-a-eslint
 
 ## Compétences
 - Assurer l'accessibilité d'un site web
