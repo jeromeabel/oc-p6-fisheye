@@ -24,7 +24,7 @@ les éléments au clavier dans le menu déroulant
 	- Liste photopgraphes; nom, slogan, localisation, prix/h, image mini
 	- Vignette = lien vers page
 - Page photographe
-	- dynamique
+	- dynamique ?id=...
 	- galerie media : images / videos (image mini dans la gallerie), titre, nb likes
 	- bouton likes : bouton ++, nb likes total (somme)
 	- tri media : popularité ou titre
@@ -63,11 +63,14 @@ les éléments au clavier dans le menu déroulant
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
 - ACCESSIBILITY : 
+    - https://www.w3.org/Translations/WCAG20-fr/
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965660-allez-plus-loin-avec-l-accessibilite
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6964639-guidez-vos-utilisateurs-sur-les-contenus-multimedia
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965649-rendez-vos-modales-et-carrousels-accessibles
     - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders
     - https://www.lalutineduweb.fr/alternatives-textuelles-attributs-aria/
+    - https://www.w3.org/WAI/ARIA/apg/ ARIA Authoring Practices Guide (APG) Home, https://www.w3.org/TR/wai-aria-1.1/
+    - communautés a11y et les sites tels que WebAIM
 - FOCUS MODAL ADA COMPLIANT : https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
 - SORT : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 - FETCH : https://javascript.info/fetch, https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
@@ -82,18 +85,22 @@ les éléments au clavier dans le menu déroulant
     - https://www.patterns.dev/posts/classic-design-patterns/
     - https://betterprogramming.pub/javascript-design-patterns-25f0faaaa15?gi=b5cecd9fc81
     - https://codingcompiler.com/javascript-design-patterns/
-- LINTER : https://www.synbioz
+- LINTER : https://www.synbioz.com/blog/tech/un-code-js-impeccable-grace-a-eslint
 
-## Outils d'accessibilitéstratégie de tests d'accessibilité holistique
-- 
+## Outils d'accessibilité
+- Stratégie de tests d'accessibilité holistique
 - Extensions Chrome:
 	- Wave Evaluation Tool (vérificateur d'accessibilité automatisé) ;
 	- aXe (vérificateur d'accessibilité automatisé) ;
 	- HeadingsMap.
-- TPG Colour Contrast Analyser + Eye Dropper
-- Lecteur d'écran NVDA (utilisateurs de PC uniquement), TalkBack (Android)
+	- Color Contrast Analyzer ??
+- TPG Colour Contrast Analyser (Mac, Win?)+ Eye Dropper : Kontrast (KDE)
+- Lecteur écran ORCA (Linux)
+- Lecteur d'écran NVDA (utilisateurs de PC uniquement) : https://blog.atalan.fr/tester-accessibilite-web-pdf-lecteur-ecran-nvda/
+- Lecteur d'écran TalkBack (Android)
+- https://validator.w3.org/nu/ + WCAG Parsing Bookmarklet : https://cdpn.io/pen/debug/VRZdGJ
+- Guide+de+test+d'accessibilité+des+WCAG.pdf
 
-.com/blog/tech/un-code-js-impeccable-grace-a-eslint
 
 ## Compétences
 - Assurer l'accessibilité d'un site web
