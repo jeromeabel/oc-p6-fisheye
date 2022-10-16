@@ -72,6 +72,8 @@ nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-cur
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
 - ACCESSIBILITY :
+    - CHECK LIST : https://www.a11yproject.com/checklist/
+    - Pa11y aims to improve the accessibility of the web through better tooling and automation : https://github.com/pa11y
     - balises sémantiques : https://fr.semrush.com/blog/balises-structurelles-html-semantique/
     - https://www.w3.org/Translations/WCAG20-fr/
     - Rôles ARIA : https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
@@ -82,6 +84,8 @@ nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-cur
     - https://www.lalutineduweb.fr/alternatives-textuelles-attributs-aria/
     - https://www.w3.org/WAI/ARIA/apg/ ARIA Authoring Practices Guide (APG) Home, https://www.w3.org/TR/wai-aria-1.1/
     - communautés a11y et les sites tels que WebAIM
+    - MODAL : https://codepen.io/nicolaspatschkowski/pen/dyYjVGj
+    - CARROUSEL : https://codepen.io/nicolaspatschkowski/pen/wvKxrov
 - FOCUS MODAL ADA COMPLIANT : https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
 - SORT : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 - FETCH : https://javascript.info/fetch, https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
