@@ -41,6 +41,16 @@ les éléments au clavier dans le menu déroulant
 
 ## Ressources
 
+### ARIA
+Header role=banner, svg role=img, footer role=contentinfo, arial-label=footer navigation, nav role="navigation", 
+form role=search, menus imbriquées (menubar, menuitem)
+a aria-current=”page” aria-label(significations des liens)
+aria-haspopup, aria-expanded
+menu imbriqués  roles tree, tabindex et treeitem : https://www.w3.org/WAI/GL/wiki/Using_ARIA_trees
+menu burger aria-controls= id
+nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-current="page">Data</li>
+
+
 ### projet
 - Étapes clés 
 - Notes - Réunion client
@@ -62,8 +72,10 @@ les éléments au clavier dans le menu déroulant
     - https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
-- ACCESSIBILITY : 
+- ACCESSIBILITY :
+    - balises sémantiques : https://fr.semrush.com/blog/balises-structurelles-html-semantique/
     - https://www.w3.org/Translations/WCAG20-fr/
+    - Rôles ARIA : https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965660-allez-plus-loin-avec-l-accessibilite
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6964639-guidez-vos-utilisateurs-sur-les-contenus-multimedia
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965649-rendez-vos-modales-et-carrousels-accessibles
