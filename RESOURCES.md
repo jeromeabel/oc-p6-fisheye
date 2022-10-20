@@ -32,12 +32,13 @@ nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-cur
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
 - ACCESSIBILITY :
+
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders
     - CHECK LIST : https://www.a11yproject.com/checklist/
     - Pa11y aims to improve the accessibility of the web through better tooling and automation : https://github.com/pa11y
     - balises sémantiques : https://fr.semrush.com/blog/balises-structurelles-html-semantique/
     - https://www.w3.org/Translations/WCAG20-fr/
     - Rôles ARIA : https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
-    - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965660-allez-plus-loin-avec-l-accessibilite
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6964639-guidez-vos-utilisateurs-sur-les-contenus-multimedia
     - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6965649-rendez-vos-modales-et-carrousels-accessibles
     - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders

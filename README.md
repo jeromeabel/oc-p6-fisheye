@@ -8,8 +8,9 @@ Créez un site accessible pour une plateforme de photographes
 - Ecrire du code JavaScript maintenable
 
 ## Contexte
-- Entreprise FishEye : Site web de photographes freelances : photos, tirages, contact
-- Mission : Moderniser le site web : site dynamique
+- Développeur junior chez Techasite, une société de conseil spécialisée dans le développement de sites web et d'applications mobiles.
+- Client FishEye : Site web de photographes freelances : photos, tirages, contact
+- Mission : Moderniser le site web en site dynamique
 
 ## Snippets
 
@@ -19,3 +20,5 @@ Créez un site accessible pour une plateforme de photographes
 - fetch, async
 - destructuring
 - function factory
+- ARIA
+- Template

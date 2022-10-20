@@ -3,14 +3,14 @@ function photographerFactory(data) {
 
     const picture = `assets/photographers/${portrait}`;
 
-    function getUserCardDOM() {
+    function getCardDOM() {
         const $wrapper = document.createElement('article');
         $wrapper.classList.add('card');
 
-        const userCard = `
+        const card = `
                 <div class="card-header">
                     <a href="photographer.html?id=${id}" arial-label="${name}">
-                        <img alt="" src="${picture}">
+                        <img class="img-rounded" alt="" src="${picture}">
                         <h2>${name}</h2>
                     </a>
                 </div>
@@ -22,14 +22,49 @@ function photographerFactory(data) {
                     </p>
                 </div>
         `
-        $wrapper.innerHTML = userCard;
+        $wrapper.innerHTML = card;
+        return $wrapper;
+    }
+
+    function getPageHeaderDOM() {
+        const $wrapper = document.createElement('div');
+        $wrapper.classList.add('photograph-header');
+        const header = `
+                <div class="photograph-heading">
+                    <h1>${name}</h1>
+                    <p>${city}, ${country}</p>
+                    <p>${tagline}</p>
+                </div>
+                <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+                <img class="img-rounded" src="${picture}" alt="">
+        `
+        $wrapper.innerHTML = header;
+        return $wrapper;
+    }
+
+    function getPageFilterDOM() {
+        const $wrapper = document.createElement('div');
+        $wrapper.classList.add('photograph-filter');
+        const filter = "Trier";
+        $wrapper.innerHTML = filter;
+        return $wrapper;
+    }
+
+    function getPageGalleryDOM() {
+        const $wrapper = document.createElement('div');
+        $wrapper.classList.add('photograph-gallery');
+        const gallery = "gallery";
+        $wrapper.innerHTML = gallery;
         return $wrapper;
     }
 
     return { 
         name, 
         picture, 
-        getUserCardDOM 
+        getCardDOM,
+        getPageHeaderDOM,
+        getPageFilterDOM,
+        getPageGalleryDOM
     }
 }
 
