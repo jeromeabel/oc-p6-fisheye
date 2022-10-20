@@ -1,9 +1,9 @@
 async function getPhotographers(url) {
     return fetch(url)
-    .then((res) => {
-        if (res.ok) return res.json()
-    })
-    .catch((err) => console.log('Erreur fetch', err))
+            .then((res) => {
+                if (res.ok) return res.json()
+            })
+            .catch((err) => console.log('Erreur fetch', err))
 }
 
 async function displayData(photographers) {

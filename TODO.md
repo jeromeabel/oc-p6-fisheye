@@ -1,5 +1,9 @@
 # TODO
 
+
+## Questions
+- étendre factory ?
+
 ## 🎯 To do
 -
 
@@ -7,8 +11,12 @@
 ## ✅ Done
 - [x] Copie des fichiers media et renommage des dossiers Id
 - [x] Récupérer les données json
-- [x] Accueil : afficher les données 
-
+- [x] Accueil : afficher les données
+- [x] Template card avec innerHTML
+- [x] Generate thumbnails for photographers
+- [x] Test accessibilité page d'accueil
+	- heading map
+	- alt img
 
 
 ## Main tasks
