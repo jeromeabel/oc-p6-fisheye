@@ -3,6 +3,8 @@
 
 ## Questions
 - étendre factory ?
+- rapport Achecker error 404 : https://achecker.ca/checker/index.php
+
 
 ## 🎯 To do
 -
@@ -15,16 +17,25 @@
 - [x] Accueil : afficher les données
 - [x] Accueil : Template card avec innerHTML
 - [x] Accueil : Test accessibilité (axe, headinmaps, wave): 
-	- wcag : heading, lang, alt img, alt logo, section photographers instead of div
+	- wcag : heading, lang, alt img, alt logo+link, section photographers instead of div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
 
+
+a title ?
+viewport ?
+?? focus
+ clavier
 ?? a aria-current="page" aria-label(significations des liens)
 link, visited, active, focus
 ?? image décorative = css ?
 ?? lien image : logo de ... - page d'accueil
 ?? page de ...
 ?? section
+
+https://www.a11yproject.com/checklist/
+https://www.w3.org/WAI/design-develop/
+https://www.w3.org/WAI/tutorials/images/functional/
 
 
 ## Main tasks

@@ -8,16 +8,18 @@ function photographerFactory(data) {
         $wrapper.classList.add('card');
 
         const userCard = `
-                <div class="card-img">
-                    <a href="photographer.html?id=${id}" arial-label="Page de ${name}" title="Page de ${name}">
-                        <img alt="Portrait de ${name}" src="${picture}">
+                <div class="card-header">
+                    <a href="photographer.html?id=${id}" arial-label="${name}">
+                        <img alt="" src="${picture}">
+                        <h2>${name}</h2>
                     </a>
                 </div>
                 <div class="card-body">
-                    <h2>${name}</h2>
-                    <p class="card-location">${city}, ${country}</p>
-                    <p class="card-tagline">${tagline}</p>
-                    <p class="card-price">${price}€/jour</p>
+                    <p>
+                        <span class="card-location">${city}, ${country}</span>
+                        <span class="card-tagline">${tagline}</span>
+                        <span class="card-price">${price}€/jour</span>
+                    </p>
                 </div>
         `
         $wrapper.innerHTML = userCard;
