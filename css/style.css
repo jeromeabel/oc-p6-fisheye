@@ -1,8 +1,16 @@
 @import url("photographer.css");
 
+/* --------- BASE ---------*/ 
+* {
+    box-sizing: border-box;
+    padding:0; 
+    margin:0;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    font-size:16px;
 }
 
 header {
@@ -23,27 +31,57 @@ h1 {
     margin-left: 100px;
 }
 
-.photographer_section {
+/* --------- GRID ---------*/ 
+
+.photographers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     margin-top: 100px;
 }
 
-.photographer_section article {
-    justify-self: center;
+/* --------- CARD ---------*/ 
+
+.card {
     display: flex;
+    justify-self: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
-.photographer_section article h2 {
-    color: #D3573C;
-    font-size: 36px;
-}
-
-.photographer_section article img {
+.card-img {
     height: 200px;
     width: 200px;
+}
+
+.card-img img {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.card-body h2 {
+    color: #D3573C;
+    font-size: 2.5em;
+    font-weight:normal;
+}
+
+.card-location {
+    color: #901C1C;
+}
+
+.card-price {
+    color: #525252;
+    font-size:0.8em;
 }

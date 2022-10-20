@@ -15,7 +15,7 @@ function photographerFactory(data) {
                 <h2>${name}</h2>
                 <p class="card-location">${city}, ${country}</p>
                 <p class="card-tagline">${tagline}</p>
-                <p>${price}€/jour</p>
+                <p class="card-price">${price}€/jour</p>
             </div>
         `
         $wrapper.innerHTML = userCard;
