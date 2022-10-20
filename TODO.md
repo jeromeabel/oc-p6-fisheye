@@ -6,7 +6,8 @@
 
 ## ✅ Done
 - [x] Copie des fichiers media et renommage des dossiers Id
-
+- [x] Récupérer les données json
+- [x] Accueil : afficher les données 
 
 
 
