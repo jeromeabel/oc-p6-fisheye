@@ -14,9 +14,12 @@
 - [x] Accueil : afficher les données
 - [x] Template card avec innerHTML
 - [x] Generate thumbnails for photographers
-- [x] Test accessibilité page d'accueil
-	- heading map
-	- alt img
+- [x] Js folder name
+- [x] Test accessibilité page d'accueil (axe, headinmaps, wave): 
+	- wcag : heading, lang, alt img, alt logo, section photographers instead of div
+	- css : reset, font-size: px + em, 
+	- card : flex, img fit, font-size, gap, ...
+
 
 
 ## Main tasks

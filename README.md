@@ -16,3 +16,6 @@ Créez un site accessible pour une plateforme de photographes
 ## Difficultés
 
 ## Acquis
+- fetch, async
+- destructuring
+- function factory
