@@ -1,3 +1,4 @@
+// Get data from url (.json)
 async function getPhotographers(url) {
     return fetch(url)
             .then((res) => {
