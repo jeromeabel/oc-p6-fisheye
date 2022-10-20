@@ -4,6 +4,34 @@ function photographerFactory(data) {
     const picture = `assets/photographers/${portrait}`;
 
     function getUserCardDOM() {
+        const $wrapper = document.createElement('article');
+        $wrapper.classList.add('card');
+
+        const userCard = `
+            <div class="card-img">
+                <img alt="Portrait de ${name}" src="${picture}">
+            </div>
+            <div class="card-body">
+                <h2>${name}</h2>
+                <p class="card-location">${city}, ${country}</p>
+                <p class="card-tagline">${tagline}</p>
+                <p>${price}€/jour</p>
+            </div>
+        `
+        $wrapper.innerHTML = userCard;
+        return $wrapper;
+    }
+
+    return { 
+        name, 
+        picture, 
+        getUserCardDOM 
+    }
+}
+
+/*
+Backup
+    function getUserCardDOM() {
         const article = document.createElement( 'article' );
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture)
@@ -23,5 +51,4 @@ function photographerFactory(data) {
         article.appendChild(p2);
         return (article);
     }
-    return { name, picture, getUserCardDOM }
-}
+*/
