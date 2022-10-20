@@ -2,16 +2,16 @@
         // Penser à remplacer par les données récupérées dans le json
         const photographers = [
             {
-                "name": "Ma data test",
+                "name": "Ma data test 1",
                 "id": 1,
                 "city": "Paris",
                 "country": "France",
-                "tagline": "Ceci est ma data test",
+                "tagline": "Ceci est ma data test 1",
                 "price": 400,
                 "portrait": "account.png"
             },
             {
-                "name": "Autre data test",
+                "name": "Autre data test 2",
                 "id": 2,
                 "city": "Londres",
                 "country": "UK",
