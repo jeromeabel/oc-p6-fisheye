@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>Fisheye</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Fisheye, retrouvez les photos de nos photographes indépendants.">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+  
+    <!-- APP ICON -->
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">  
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/all.css">
   </head>
   <body>
+
     <header role="banner">
-        <a href="/"><img src="assets/images/logo.png" class="logo" alt="Fisheye page d'accueil"></a>
+        <a href="/"><img class="logo" src="assets/logo/logo.png" alt="Fisheye page d'accueil"></a>
         <h1>Nos photographes</h1>
     </header>
-    <main id="main">
+
+    <main>
         <section class="photographers"></section>
     </main>
-    <script src="js/factories/photographer.js"></script>
+
+    <!-- <script src="js/factories/photographer.js"></script>
     <script src="js/utils/getData.js"></script>
-    <script src="js/pages/index.js"></script>
+    <script src="js/pages/index.js"></script> -->
   </body>
 </html>

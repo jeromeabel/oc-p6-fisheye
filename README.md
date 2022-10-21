@@ -9,18 +9,19 @@ Créez un site accessible pour une plateforme de photographes
 
 ## Contexte
 - Développeur junior chez Techasite, une société de conseil spécialisée dans le développement de sites web et d'applications mobiles.
-- Client FishEye : Site web de photographes freelances : photos, tirages, contact
-- Mission : Moderniser le site web en site dynamique
+- Client FishEye : site web de photographes freelances avec photos, tirages, contact
+- Mission : moderniser le site web en site dynamique
 
 ## Snippets
 
 ## Difficultés
 - confusion factory pattern : class extends (héritage) vs function factory ?
--  data !! images
+- data !! images
+- reprendre le code ou tout refaire 
 
 ## Acquis
 - fetch, async
 - destructuring
-- function factory
+- factory method
 - ARIA
-- Template
+- Template literal strings
