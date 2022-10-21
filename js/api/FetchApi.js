@@ -1,16 +1,9 @@
 class FetchApi {
-    /**
-     * 
-     * @param {string} url 
-     */
-    constructor(url) {
-        this._url = url
-    }
 
-    async get() {
-        return fetch(this._url)
-            .then(res => res.json())
-            .then(res => res.data)
-            .catch(err => console.log('an error occurs', err))
+    static async get(url) {
+        return fetch(url)
+            .then(response => response.json())
+            .catch(error => console.log('An error occurs', error))
     }
+    
 }

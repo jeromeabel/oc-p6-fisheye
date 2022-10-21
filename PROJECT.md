@@ -1,56 +1,33 @@
-# TODO
+# PROJECT MANAGEMENT
 
 
 
 
 ## 🎯 To do
-- [ ] Clean respositoryf from scratch
-
-
-
-## Questions
-
-// data !! images
-
-
-https://google.github.io/styleguide/htmlcssguide.html
-
-- ? focus
-- ? viewport
-- a title ?
-- ? link, visited, active, focus
-- ? image décorative = css
-
-- function factory ou class factory pattern ?
-
-
-
-
-
-## ✅ Done
 - [x] Copie des fichiers media et renommage des dossiers Id
 - [x] Generate thumbnails for photographers
+- [x] Clean repository from scratch (sass, js), add structure
+- [x] Home : header
+- [ ] Get data from json
+- [x] Home : main, display data
+
+
+
 - [x] Récupérer les données json
 - [x] Accueil : afficher les données
 - [x] Accueil : Template card avec innerHTML
-- [x] Accueil : Test accessibilité (axe, headinmaps, wave): 
+- [x] Accueil : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
 
 
- clavier
-?? a aria-current="page" aria-label(significations des liens)
 
-https://achecker.achecks.ca/checker/index.php
-Lighthouse
-
-https://www.a11yproject.com/checklist/
-https://www.w3.org/WAI/design-develop/
-https://www.w3.org/WAI/tutorials/images/functional/
+## Notes
 
 
-## Main tasks
+
+## Guidelines
 - #1 - Prendre en main le html, css, js : inspecteur, console.log
 - #2 - Importer les datas : fetch json
 - #3 - Intégrer la page d'accueil : accessibilité DOM/HTML/CSS, étendre photographerFactory
@@ -62,7 +39,35 @@ https://www.w3.org/WAI/tutorials/images/functional/
 - #9 - Créer le système de tri : sort, rapport d'accessibilité, gérer l'accessibilité en permettant de sélectionner les éléments au clavier dans le menu déroulant
 - #10 - Vérifier le code avec un linter
 
+## Notes
+- data !! images
+- ? focus
+- ? viewport
+- a title ?
+- ? link, visited, active, focus
+- ? image décorative = css
+
+- function factory ou class factory pattern ?
+
+
+ clavier
+?? a aria-current="page" aria-label(significations des liens)
+
+
+
+    /**
+     * 
+     * @param {string} url 
+     */
+
+??
+       return fetch(this._url)
+            .then(res => res.json())
+            // .then(res => res.data) //???
+            .catch(err => console.log('an error occurs', err))
+     
 ## Cahier des charges
+
 - Coding rules : fichiers séparés html/css/js, ES6, Eslint/VsCode, Naming, Comments 
 - Responsive : pas besoin
 - Page accueil
@@ -88,7 +93,7 @@ https://www.w3.org/WAI/tutorials/images/functional/
 
 ## Ressources
 
-## projet
+### projet
 - Étapes clés 
 - Notes - Réunion client
 - Maquettes Figma
@@ -96,12 +101,12 @@ https://www.w3.org/WAI/tutorials/images/functional/
 - json
 - Code Github
 
-## cours
+### cours
 - https://openclassrooms.com/fr/courses/6691346-concevez-un-contenu-web-accessible
 - https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css
 - https://openclassrooms.com/fr/courses/7133336-utilisez-des-design-patterns-en-javascript
 
-## ARIA
+### ARIA
 Header role=banner, svg role=img, footer role=contentinfo, arial-label=footer navigation, nav role="navigation", 
 form role=search, menus imbriquées (menubar, menuitem)
 a aria-current=”page” aria-label(significations des liens)
@@ -110,7 +115,7 @@ menu imbriqués  roles tree, tabindex et treeitem : https://www.w3.org/WAI/GL/wi
 menu burger aria-controls= id
 nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-current="page">Data</li>
 
-## articles 
+### articles 
 - extension : wave evaluation tool + Lighthouse
 - attribut tabindex ?
 - factory pattern ( OOP "class" )
@@ -164,3 +169,9 @@ https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_t
 - https://validator.w3.org/nu/ + WCAG Parsing Bookmarklet : https://cdpn.io/pen/debug/VRZdGJ
 - Guide+de+test+d'accessibilité+des+WCAG.pdf
 
+https://google.github.io/styleguide/htmlcssguide.html
+https://achecker.achecks.ca/checker/index.php
+Lighthouse
+https://www.a11yproject.com/checklist/
+https://www.w3.org/WAI/design-develop/
+https://www.w3.org/WAI/tutorials/images/functional/

@@ -1,15 +1,16 @@
-// Base
-@import "base/normalize";
-@import "base/base";
-
 // Utils
 @import "utils/animations";
 @import "utils/mixins";
 @import "utils/variables";
 
+// Base
+@import "base/normalize";
+@import "base/base";
+
 // Components
 @import "components/buttons";
 @import "components/card";
+@import "components/images";
 @import "components/loader";
 @import "components/modal";
 @import "components/slide";

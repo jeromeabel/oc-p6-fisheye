@@ -1,3 +1,49 @@
+/* --------- CARD ---------*/ 
+
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    text-align: center;
+
+    &__header {
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        
+        &:hover img {
+            box-shadow:0 0 10px $color-grey;
+        }
+
+        h2 {
+            margin-top:10px;
+            color: $color-secondary;
+            font-size: $font-xxl;
+            font-weight:normal;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: $font-s;
+        
+        span {
+            display:block;
+        }
+    }
+
+    &__location {
+        color: $color-primary;
+    }
+    
+    &__price {
+        color: $color-grey;
+    }
     
 }
