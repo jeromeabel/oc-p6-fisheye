@@ -1,30 +1,38 @@
 /* --------- MODAL ---------*/ 
-#contact_modal {
+#modal {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+
 }
 
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
+.modal-content {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
-    margin: auto;
+    margin: 25% auto;
+    border-radius: 5px;
+    background-color: #DB8876;
 }
 
-.modal header {
+.modal-content header {
     justify-content: space-between;
     width: 100%;
 }
 
-.modal header img {
+.modal-content header img {
     cursor: pointer;
 }
 
-.modal header h2 {
+.modal-content header h2 {
     font-size: 64px;
     font-weight: normal;
     text-align: center;

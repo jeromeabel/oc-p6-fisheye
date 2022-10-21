@@ -68,6 +68,18 @@ function photographerFactory(data) {
     }
 }
 
+// extends vs function factory ?
+// function pageFactory() extends photographerFactory {
+
+//     constructor() {
+//         super();
+//     }
+
+//     getMediaCardDOM() {
+
+//     }
+// }
+
 /*
 Backup
     function getUserCardDOM() {

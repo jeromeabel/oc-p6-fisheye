@@ -1,9 +1,18 @@
 function mediaFactory(data) {
-    const {id, photographerId, title, image, likes, date, price } = data;
+    const {id, photographerId, title, likes, date, price } = data;
 
-    const pictureURL = `assets/media/small/${photographerId}/${image}`;
+    const pictureURL = `./assets/media/small/${photographerId}/${image}`;
 
-    function getMediaCardDOM() {
+    function getMediaCardDOM(type) {
+
+        // if (type === "image") return getMediaImageDOM(title, data.image);
+        // else if (type === "video") return getMediaVideoDOM(title, data.video);
+        // else {
+        //  throw "Invalid type"
+        // }
+
+        // noeuds ou innerHTML ?
+
         const $wrapper = document.createElement('div');
         $wrapper.classList.add('card-img');
 
@@ -13,9 +22,21 @@ function mediaFactory(data) {
         `
         $wrapper.innerHTML = card;
         return $wrapper;
+        
     }
 
     return {
         getMediaCardDOM,
+        //....
     }
+}
+
+
+
+function getMediaImageDOM(title, image) {
+
+}
+
+function getMediaVideoDOM(title , video) {
+
 }

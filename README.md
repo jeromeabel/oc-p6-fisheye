@@ -15,6 +15,8 @@ Créez un site accessible pour une plateforme de photographes
 ## Snippets
 
 ## Difficultés
+- confusion factory pattern : class extends (héritage) vs function factory ?
+-  data !! images
 
 ## Acquis
 - fetch, async

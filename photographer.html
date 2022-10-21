@@ -13,17 +13,19 @@
       <a href="/"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"></a>
     </header>
 
-    <!-- Main -->
-    <main id="main">
+    <!-- Main -aria-hidden="true" -->
+    <main id="main" >
     </main>
 
     <!-- Modal -->
-    <div id="contact_modal">
-			<div class="modal">
+    <div id="modal"> <!-- class -->
+			<div class="modal-content">
+        
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer modal" />
         </header>
+
 				<form>
 					<div>
 						<label>Prénom</label>
@@ -31,8 +33,21 @@
 					</div>
           <button class="contact_button">Envoyer</button>
 				</form>
+
 			</div>
 		</div>
+
+
+    <!-- slideshow -->
+    <div class="slideshow">
+      <img class="slide-img" src="" alt="" data-index="0">
+      <button class="slide-prev"> Prev. </button>
+      <button class="slide-next"> Next. </button>
+    </div>
+
+
+
+    <script src="js/utils/slideShow.js"></script>
     <script src="js/factories/media.js"></script>
     <script src="js/factories/photographer.js"></script>
     <script src="/js/utils/contactForm.js"></script>
