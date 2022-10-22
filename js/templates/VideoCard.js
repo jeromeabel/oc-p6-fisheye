@@ -8,13 +8,13 @@ class VideoCard {
     createCard() {
         const card = `
             <video src="assets/media/large/${this.data.photographerId}/${this.data.video}"></video>
-               <div class="card-media__footer">
+            <div class="card-media__footer">
                <h2>${this.data.title}</h2>
                <div class="card-media__like">
                  <span class="likes">${this.data.likes}</span>
                  <span class="btn-like">🖤</span>
                </div>
-             </div>
+            </div>
         `
         this.$wrapper.innerHTML = card;
         return this.$wrapper;

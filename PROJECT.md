@@ -6,7 +6,7 @@
 - [x] Generate thumbnails for photographers
 - [x] Clean repository from scratch (sass, js), add structure
 - [x] Home : header
-- [ ] Fetch : Get data from json
+- [x] Fetch : Get data from json
 - [x] Home : main, display data, links, templates card
 - [x] Page : template Header
 - [x] Page : template Media, MediaFactory

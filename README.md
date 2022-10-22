@@ -24,4 +24,4 @@ Créez un site accessible pour une plateforme de photographes
 - destructuring
 - factory method
 - ARIA
-- Template literal strings
+- Template literal strings, create DOM nodes ?
