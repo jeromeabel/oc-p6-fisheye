@@ -1,17 +1,15 @@
 .page {
+    margin: 0 100px;
     &__header {
         display:flex;
         justify-content: space-around;
         align-items: center;
         height: 300px;
-        margin: 0 100px;
+        
         background-color: $color-grey-light;
     }
 
     &__heading {
-        // display: flex;
-        // flex-direction:column;
-
         h1 { 
             color: $color-secondary;
             font-size: $font-hero;
@@ -22,12 +20,14 @@
             color: $color-primary;
             font-size: $font-xl;
         }
-        
-
     }
 
     &__portrait {
         height: 200px;
         width:200px;
+    }
+
+    &__gallery {
+        margin: 80px auto;
     }
 }

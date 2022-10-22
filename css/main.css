@@ -82,6 +82,29 @@ button {
   color: #525252;
 }
 
+.card-media {
+  color: #901C1C;
+  width: 350px;
+  height: 350px;
+}
+.card-media img, .card-media video {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+.card-media h2 {
+  font-weight: normal;
+  font-size: 1.125em;
+}
+.card-media__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .img-rounded {
   border-radius: 50%;
   -o-object-fit: cover;
@@ -113,12 +136,14 @@ button {
   margin-bottom: 50px;
 }
 
+.page {
+  margin: 0 100px;
+}
 .page__header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 300px;
-  margin: 0 100px;
   background-color: #FAFAFA;
 }
 .page__heading h1 {
@@ -133,4 +158,7 @@ button {
 .page__portrait {
   height: 200px;
   width: 200px;
+}
+.page__gallery {
+  margin: 80px auto;
 }/*# sourceMappingURL=main.css.map */

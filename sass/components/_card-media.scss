@@ -1,0 +1,24 @@
+.card-media {
+    color: $color-primary;
+    width: 350px;
+    height:350px;
+
+    img, video {
+        height: 300px;
+        width:100%;
+        object-fit: cover;
+        border-radius: 5px;
+        display:block;
+    }
+
+    h2 {
+        font-weight:normal;
+        font-size: $font-l;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

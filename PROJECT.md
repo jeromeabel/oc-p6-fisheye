@@ -1,22 +1,19 @@
 # PROJECT MANAGEMENT
 
 
-
-
 ## 🎯 To do
 - [x] Copie des fichiers media et renommage des dossiers Id
 - [x] Generate thumbnails for photographers
 - [x] Clean repository from scratch (sass, js), add structure
 - [x] Home : header
-- [ ] Get data from json
-- [x] Home : main, display data
+- [ ] Fetch : Get data from json
+- [x] Home : main, display data, links, templates card
+- [x] Page : template Header
+- [x] Page : template Media, MediaFactory
 
 
 
-- [x] Récupérer les données json
-- [x] Accueil : afficher les données
-- [x] Accueil : Template card avec innerHTML
-- [x] Accueil : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
+- [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
