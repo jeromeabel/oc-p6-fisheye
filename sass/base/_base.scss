@@ -34,7 +34,7 @@ a {
     color: inherit;
 }
 
-a:focus {
+*:focus {
     outline:2px dashed $color-secondary;
 }
 
