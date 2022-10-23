@@ -11,15 +11,13 @@
 - [x] Page : template Header, ?id=
 - [x] Page : template Media, MediaFactory
 - [x] Page : corrections noms d'images (error 404)
-Page slideshow, no-scroll, aria-hidden, role dialog, focus, enter keyboard(open), esc
-Page titre
+- [x] Page - slideshow, no-scroll, aria-hidden, role dialog, focus, enter keyboard(open), esc, arrows
+- [x] Page - slideshow : focus, trapFocus (tabindex -1)
+- [x] Page - title : specific first
 - [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
-
-?? focus ??
-
 
 ## Notes
 
@@ -46,6 +44,16 @@ Page titre
 - ? image décorative = css
 
 - function factory ou class factory pattern ?
+
+
+
+ https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
+video sous-totre ou pas d'audio ?
+
+https://dev.to/robdodson/managing-focus-64l
+https://web.dev/a11y-for-teams/
+
+
 
 
  clavier

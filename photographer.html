@@ -27,18 +27,18 @@
     </header>
 
     <!-- PAGE MAIN-->
-    <main class="page" aria-hidden="false">
+    <main class="page">
     </main>
 
     <div id="slideshow" class="modal hide" aria-label="Slide show des photos" aria-hidden="true" role="dialog">
       <section class="slide">
-        <button class="btn-slide slide__close">
+        <button class="btn-slide slide__close" aria-label="Fermer le slideshow">
           <i class="fa fa-close" aria-hidden="true"></i>
         </button>
-        <button class="btn-slide slide__prev">
+        <button class="btn-slide slide__prev" aria-label="Image précédente">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
-        <button class="btn-slide slide__next">
+        <button class="btn-slide slide__next" aria-label="Image suivante">
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
         
@@ -47,11 +47,13 @@
           <video class="slide__video hide" src="" controls></video>
           <p class="slide__name"></p>
         </div>
-
-
       </section>
     </div>
 
+
+    <div id="form" class="modal hide" aria-label="Formulaire de contact" aria-hidden="true" role="dialog">
+  
+    </div>
   
     <!-- JS SCRIPTS -->
     <script src="./js/api/FetchApi.js"></script>

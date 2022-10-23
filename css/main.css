@@ -220,9 +220,6 @@ button {
   height: 300px;
   background-color: #FAFAFA;
 }
-.page[aria-hidden=true] {
-  visibility: hidden;
-}
 .page__heading h1 {
   color: #D3573C;
   font-size: 2.5em;

@@ -1,20 +1,17 @@
 .page {
-
-
     margin: 0 100px;
+
     &__header {
         display:flex;
         justify-content: space-around;
         align-items: center;
         height: 300px;
-        
         background-color: $color-grey-light;
     }
 
-    &[aria-hidden='true'] {
-       visibility:hidden;
-        
-    }
+    // &[aria-hidden='true'] {
+    //   visibility:hidden;
+    // }
 
     &__heading {
         h1 { 

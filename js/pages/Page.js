@@ -31,6 +31,7 @@ class Page {
         const $wrapperGallery = document.createElement('section');
         $wrapperGallery.classList.add("grid");
         $wrapperGallery.classList.add("page__gallery");
+        $wrapperGallery.setAttribute("aria-label", "Gallerie de photos");
 
         for (const media of this.mediaData)  {
             let type = "image";
@@ -44,10 +45,13 @@ class Page {
 
     setSlideShowListeners() {
         const $wrapperSlideShow = new SlideShowModal(this.mediaData);
+        
         // Close modale : Key Escaoe
         document.addEventListener("keydown", (e) => {
-            if( $wrapperSlideShow.isOpened && e.key === 'Escape'  ) {
-                $wrapperSlideShow.close();
+            if( $wrapperSlideShow.isOpened) {
+                if (e.key === 'Escape' ) $wrapperSlideShow.close();
+                else if (e.key === "ArrowLeft") $wrapperSlideShow.prev();
+                else if (e.key === "ArrowRight") $wrapperSlideShow.next();
             }
         })
         
@@ -57,7 +61,9 @@ class Page {
             const id = card.getAttribute('data-id');
             card.addEventListener('click', (e) => $wrapperSlideShow.open(id))
             card.addEventListener("keydown", (e) => {
-                if (e.key === "Enter") { $wrapperSlideShow.open(id); }
+                if (e.key === "Enter") { 
+                    $wrapperSlideShow.open(id); 
+                }
               });
         }
     }
