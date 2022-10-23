@@ -3,6 +3,7 @@ class VideoCard {
         this.data = data;
         this.$wrapper = document.createElement('div');
         this.$wrapper.classList.add('card-media');
+        this.$wrapper.setAttribute('tabindex', '0');
     }
 
     createCard() {
