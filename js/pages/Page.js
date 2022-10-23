@@ -16,6 +16,10 @@ class Page {
          this.mediaData = media.filter( media => media.photographerId === this.id );
     }
 
+    setTitle(){
+        document.title = `${this.photographerData.name} - Fisheye`;
+    }
+
     displayHeader(){
         const template = new PageHeader(this.photographerData);
         this.$wrapper.appendChild(template.createHeader())
@@ -38,27 +42,42 @@ class Page {
         this.$wrapper.appendChild($wrapperGallery);
     }
 
-    displaySlideShow() {
+    setSlideShowListeners() {
         const $wrapperSlideShow = new SlideShowModal(this.mediaData);
+        // ESCAPE : close modale
+        document.addEventListener("keydown", (e) => {
+            if( $wrapperSlideShow.isOpened && e.key === 'Escape'  ) {
+                $wrapperSlideShow.close();
+            }
+        })
         
+        // Open Modal : mouse + Key Enter
         const cards = document.querySelectorAll('.card-media');
         for (const card of cards) {
             card.addEventListener('click', (e) => {
                 const id = card.getAttribute('data-id');
-                $wrapperSlideShow.show(id);
+                $wrapperSlideShow.open(id);
             })
+
+            card.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    const id = card.getAttribute('data-id');
+                    $wrapperSlideShow.open(id);
+                }
+              });
         }
     }
     
     async main() {
-
         await this.getData();
-       
+
+        this.setTitle();
+
         this.displayHeader();
 
         this.displayMediaGallery();
 
-        this.displaySlideShow();
+        this.setSlideShowListeners();
     }  
 }
 
