@@ -117,7 +117,7 @@ button {
 }
 .card-media:hover {
   cursor: pointer;
-  transform: scale(1.05, 1.05);
+  transform: scale(1.03, 1.03);
 }
 
 .img-rounded {
@@ -142,6 +142,11 @@ button {
 
 .hide {
   display: none;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .slide {
@@ -214,6 +219,9 @@ button {
   align-items: center;
   height: 300px;
   background-color: #FAFAFA;
+}
+.page[aria-hidden=true] {
+  visibility: hidden;
 }
 .page__heading h1 {
   color: #D3573C;

@@ -8,16 +8,17 @@
 - [x] Home : header
 - [x] Fetch : Get data from json
 - [x] Home : main, display data, links, templates card
-- [x] Page : template Header
+- [x] Page : template Header, ?id=
 - [x] Page : template Media, MediaFactory
 - [x] Page : corrections noms d'images (error 404)
-
+Page slideshow, no-scroll, aria-hidden, role dialog, focus, enter keyboard(open), esc
 Page titre
 - [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
 
+?? focus ??
 
 
 ## Notes
