@@ -44,26 +44,20 @@ class Page {
 
     setSlideShowListeners() {
         const $wrapperSlideShow = new SlideShowModal(this.mediaData);
-        // ESCAPE : close modale
+        // Close modale : Key Escaoe
         document.addEventListener("keydown", (e) => {
             if( $wrapperSlideShow.isOpened && e.key === 'Escape'  ) {
                 $wrapperSlideShow.close();
             }
         })
         
-        // Open Modal : mouse + Key Enter
+        // Open Modal : mouse click + Key Enter
         const cards = document.querySelectorAll('.card-media');
         for (const card of cards) {
-            card.addEventListener('click', (e) => {
-                const id = card.getAttribute('data-id');
-                $wrapperSlideShow.open(id);
-            })
-
+            const id = card.getAttribute('data-id');
+            card.addEventListener('click', (e) => $wrapperSlideShow.open(id))
             card.addEventListener("keydown", (e) => {
-                if (e.key === "Enter") {
-                    const id = card.getAttribute('data-id');
-                    $wrapperSlideShow.open(id);
-                }
+                if (e.key === "Enter") { $wrapperSlideShow.open(id); }
               });
         }
     }
