@@ -10,9 +10,9 @@
 - [x] Home : main, display data, links, templates card
 - [x] Page : template Header
 - [x] Page : template Media, MediaFactory
+- [x] Page : corrections noms d'images (error 404)
 
-
-
+Page titre
 - [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 

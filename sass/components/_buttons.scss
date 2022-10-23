@@ -9,3 +9,14 @@
     color: white;
     cursor: pointer;
 }
+
+.btn-slide {
+    padding: 20px;
+    color: $color-primary;
+    font-size: $font-xxl;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}

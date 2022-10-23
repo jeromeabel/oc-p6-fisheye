@@ -2,6 +2,7 @@
     color: $color-primary;
     width: 350px;
     height:350px;
+    transition:transform 350ms;
 
     img, video {
         height: 300px;
@@ -20,5 +21,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05, 1.05);
     }
 }

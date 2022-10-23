@@ -5,8 +5,6 @@ class Page {
         this.photographerData = [];
         this.mediaData = [];
 
-        this.$modalGallery = new GalleryModal();
-
          // Get Id from URL
         const params = (new URL(document.location)).searchParams;
         this.id = parseInt(params.get('id'));
@@ -40,6 +38,18 @@ class Page {
         this.$wrapper.appendChild($wrapperGallery);
     }
 
+    displaySlideShow() {
+        const $wrapperSlideShow = new SlideShowModal(this.mediaData);
+        
+        const cards = document.querySelectorAll('.card-media');
+        for (const card of cards) {
+            card.addEventListener('click', (e) => {
+                const id = card.getAttribute('data-id');
+                $wrapperSlideShow.show(id);
+            })
+        }
+    }
+    
     async main() {
 
         await this.getData();
@@ -48,16 +58,7 @@ class Page {
 
         this.displayMediaGallery();
 
-        this.$wrapper.appendChild(this.$modalGallery.create());
-
-        const cards = document.querySelectorAll('.card-media');
-        for (const c of cards) {
-            c.addEventListener('click', (e) => {
-                const id = c.getAttribute('data-index');
-                this.$modalGallery.show(id);
-                console.log('click');
-            })
-        }
+        this.displaySlideShow();
     }  
 }
 

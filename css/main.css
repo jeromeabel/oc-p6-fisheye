@@ -44,6 +44,16 @@ button {
   cursor: pointer;
 }
 
+.btn-slide {
+  padding: 20px;
+  color: #901C1C;
+  font-size: 2em;
+  cursor: pointer;
+}
+.btn-slide:hover {
+  color: #D3573C;
+}
+
 /* --------- CARD ---------*/
 .card {
   display: flex;
@@ -86,6 +96,7 @@ button {
   color: #901C1C;
   width: 350px;
   height: 350px;
+  transition: transform 350ms;
 }
 .card-media img, .card-media video {
   height: 300px;
@@ -104,6 +115,10 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.card-media:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+}
 
 .img-rounded {
   border-radius: 50%;
@@ -112,24 +127,57 @@ button {
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100wh;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.modal__content {
-  margin: auto;
-  height: 600px;
-  width: 600px;
-  background-color: black;
+  z-index: 1;
 }
 
 .show {
   display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #901C1C;
+  text-align: center;
+}
+.slide__media {
+  width: 80%;
+  height: 80%;
+}
+.slide__video, .slide__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.slide__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.slide__next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+.slide__prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
 }
 
 .grid {
