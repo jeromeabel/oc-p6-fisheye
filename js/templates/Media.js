@@ -17,18 +17,20 @@ class MediaImage extends Media {
         super(data);
         this.image = data.image;
         this.imageSrc = `assets/media/small/${this.photographerId}/${this.image}`;
+
+        // Media Element
+        this.$imgElt = document.createElement('img');
+        this.$imgElt.setAttribute('tabindex', '0');
+        this.$imgElt.setAttribute('alt', this.title);
+        this.$imgElt.setAttribute('src', this.imageSrc);
+    }
+
+    get element() {
+        return this.$imgElt;
     }
 
     createCard() {
-        const html =
-            `<img 
-                tabindex="0"
-                class="card-media__media"
-                alt="${this.title}" 
-                src="${this.imageSrc}"
-                >
-            `;
-        return this.cardTemplate.create(html);
+        return this.cardTemplate.create(this.$imgElt);
     }
 }
 
@@ -37,16 +39,18 @@ class MediaVideo extends Media {
         super(data);
         this.video = data.video;
         this.videoSrc = `assets/media/large/${this.photographerId}/${this.video}`;
+
+        // Media Element
+        this.$videoElt = document.createElement('video');
+        this.$videoElt.setAttribute('tabindex', '0');
+        this.$videoElt.setAttribute('src', this.videoSrc);
+    }
+
+    get element() {
+        return this.$videoElt;
     }
 
     createCard() {
-        const html =
-            `<video
-                tabindex="0"
-                class="card-media__media" 
-                src="${this.videoSrc}">
-            </video>
-            `;
-        return this.cardTemplate.create(html);
+        return this.cardTemplate.create(this.$videoElt);
     }
 }

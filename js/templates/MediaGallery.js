@@ -17,4 +17,12 @@ class MediaGallery {
         }
         return this.$wrapper;
     }
+
+    getMediaElements() {
+        const elements = []
+        this.media.forEach( (media) => {
+            elements.push(media.element);
+        })
+        return elements;
+    }
 }

@@ -20,4 +20,8 @@ class PhotographerHeader {
         this.$wrapper.innerHTML = html;
         return this.$wrapper;
     }
+
+    getContactElement() {
+        return document.querySelector('.contact__open');
+    }
 }

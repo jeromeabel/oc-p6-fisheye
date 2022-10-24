@@ -10,19 +10,22 @@ class MediaCard {
     this.$wrapper.setAttribute('data-id', this.id);
   }
 
-  create(htmlSource) {
-    const footer =
-      `<div class="media-card__footer">
-        <h2>${this.title}</h2>
+  create(eltSource) {
+    const footerhtml =
+      `<h2>${this.title}</h2>
         <p>
           <span class="likes">${this.likes}</span>
           <span class="btn-like">
             <i class="fa fa-heart" aria-label="likes"></i>
           </span>
         </p>
-      </div>
       `
-    this.$wrapper.innerHTML = htmlSource + footer;
+    const footerElt = document.createElement('div');
+    footerElt.classList.add('media-card__footer');
+    footerElt.innerHTML = footerhtml;
+    this.$wrapper.appendChild(eltSource);
+    this.$wrapper.appendChild(footerElt);
+    //this.$wrapper.innerHTML = htmlSource + footer;
     return this.$wrapper;
   }
 }
