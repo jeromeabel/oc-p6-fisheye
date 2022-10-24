@@ -7,6 +7,15 @@ class Page {
          // Get Id from URL
         const params = (new URL(document.location)).searchParams;
         this.id = parseInt(params.get('id'));
+
+        this.likes = 0;
+
+        this.$wrapperLikes = document.createElement('div');
+        this.$wrapperLikes.classList.add("page__likes");
+        this.$wrapperLikes.setAttribute("aria-label", "Nombre de likes");
+        this.$likeElement = document.createElement('p');
+        this.$wrapperLikes.appendChild(this.$likeElement);
+        this.$wrapper.appendChild(this.$wrapperLikes);
     }
 
     async getData() {
@@ -37,10 +46,23 @@ class Page {
             if ( media.video ) type = "video";
             const template = new MediaCardFactory(media, type);
             $wrapperGallery.appendChild(template.createCard());
-            template.setLikeListeners();
+            this.likes += template.getLikes();
+            template.setLikeListeners(this.$likeElement);
         }
         
         this.$wrapper.appendChild($wrapperGallery);
+    }
+
+
+    displayLikes() {
+
+        this.$likeElement.innerHTML = 
+            `
+            ${this.likes}
+            <i class="fa fa-heart" aria-label="likes"></i>
+            ${this.photographerData.price}€ / jour
+            `
+
     }
 
     setSlideShowListeners() {
@@ -77,15 +99,20 @@ class Page {
     async main() {
         await this.getData();
 
+
         this.setTitle();
 
         this.displayHeader();
 
         this.displayMediaGallery();
 
+
         this.setSlideShowListeners();
 
         this.setContactFormListeners();
+
+        this.displayLikes();
+
     }  
 }
 

@@ -3,8 +3,13 @@ class VideoCard {
         this.data = data;
         this.$wrapper = document.createElement('div');
         this.$wrapper.classList.add('card-media');
-        this.$wrapper.setAttribute('tabindex', '0');
+        // this.$wrapper.setAttribute('tabindex', '0');
+        this.likes = data.likes;
+
     }
+
+    getLikes() { return this.likes }
+
 
     createCard() {
         this.$wrapper.setAttribute('data-id', this.data.id);
@@ -18,8 +23,8 @@ class VideoCard {
                <h2>${this.data.title}</h2>
                <div class="card-media__like">
                  <span class="likes">${this.data.likes}</span>
-                 <span class="btn-like">🖤</span>
-               </div>
+                 <span class="btn-like"><i class="fa fa-heart" aria-label="likes"></i></span>
+                 </div>
             </div>
         `
         this.$wrapper.innerHTML = card;

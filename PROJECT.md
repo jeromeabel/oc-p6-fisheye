@@ -20,6 +20,8 @@
 	- card : flex, img fit, font-size, gap, ...
 
 - [ ] Page - contact : aria-invalid, style, focus, role, aria-label, afficher le contenu dans la console
+- [ ] Page - media card likes :
+- [ ] Page - likes
 
 ## Notes
 

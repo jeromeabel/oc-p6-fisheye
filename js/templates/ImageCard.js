@@ -8,6 +8,8 @@ class ImageCard {
 
   }
 
+  getLikes() { return this.likes }
+
   createCard() {
     this.$wrapper.setAttribute('data-id', this.data.id);
     const card = `
@@ -20,7 +22,7 @@ class ImageCard {
                   <h2>${this.data.title}</h2>
                   <div class="card-media__like">
                     <span class="likes">${this.data.likes}</span>
-                    <span class="btn-like"><i class="fa fa-heart"></i></span>
+                    <span class="btn-like"><i class="fa fa-heart" aria-label="likes"></i></span>
                   </div>
                 </div>
         `
@@ -29,11 +31,12 @@ class ImageCard {
     return this.$wrapper;
   }
 
-  setLikeListeners() {
+  setLikeListeners(likeElt) {
     const btnLike = this.$wrapper.querySelector('.btn-like');
     const likeNb = this.$wrapper.querySelector('.likes');
     btnLike.addEventListener('click', (e) => {
       likeNb.textContent=this.likes+1;
+      likeElt.innerHTML = this.likes;
       e.preventDefault();
       //btnLike.removeEventListener('click');
     })
