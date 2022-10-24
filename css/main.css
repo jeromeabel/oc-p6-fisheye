@@ -172,6 +172,9 @@ button {
   color: #901C1C;
   font-size: 1.5em;
 }
+.intro__text p {
+  color: #525252;
+}
 .intro__portrait {
   height: 200px;
   width: 200px;
