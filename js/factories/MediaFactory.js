@@ -1,9 +1,9 @@
 class MediaFactory {
-    constructor(data) {
-        if (data.image) {
-            return new MediaImage(data);
-        } else if (data.video) {
-            return new MediaVideo(data);
+    constructor(media) {
+        if (media.image) {
+            return new MediaImage(media);
+        } else if (media.video) {
+            return new MediaVideo(media);
         } else {
             throw "MediaFactory Error : Unkown type";
         }

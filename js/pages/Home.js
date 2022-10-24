@@ -9,7 +9,7 @@ class Home {
     async getData() {
         const { photographers } = await this.api.getData();
         for (const photographer of photographers) {
-            this.photographers.push(new PhotographerFactory(photographer));
+            this.photographers.push(new PhotographerFactory(photographer, []));
         }
     }
 

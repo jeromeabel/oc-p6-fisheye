@@ -11,8 +11,14 @@ body {
     color:black;
 }
 
-header, main {
+header {
     padding:30px 0;
+}
+main {
+    margin-bottom: 50px;
+}
+
+header, main {
     width:90%;
     margin-inline:auto;
 }

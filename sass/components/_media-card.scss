@@ -1,0 +1,29 @@
+.media-card {
+    color: $color-primary;
+        
+    img, video {
+        height: 300px;
+        width:100%;
+        object-fit: cover;
+        border-radius: 5px;
+        display:block;
+        transition:transform 350ms;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03, 1.03);
+        }
+    }
+
+    h2 {
+        font-weight:normal;
+        font-size: $font-l;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+}

@@ -1,16 +1,13 @@
 class PhotographerFactory {
-    constructor(data) {
+    constructor(data, media) {
         this.data = data;
+        this.media = media;
+
         this.cardTemplate = new PhotographerCard(this.data);
         this.headerTemplate = new PhotographerHeader(this.data);
-
-        // this.name = data.name;
-        // this.id = data.id;
-        // this.city = data.city;
-        // this.country = data.country;
-        // this.tagline = data.tagline;
-        // this.price = data.price;
-        // this.portrait = data.portrait;
+        if (this.media) this.galleryTemplate = new MediaGallery(this.media);
+        // this.filterTemplate = new Filter(this.media);
+        // this.likesTemplate = new Likes(this.media)
     }
 
     createPortrait() {
@@ -21,5 +18,8 @@ class PhotographerFactory {
         return this.headerTemplate.create();
     }
 
+    createGallery(){
+        return this.galleryTemplate.create();
+    }
 
 }

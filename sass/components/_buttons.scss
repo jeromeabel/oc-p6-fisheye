@@ -1,0 +1,34 @@
+.btn-contact {
+    border-radius: 5px;
+    padding:15px 10px;
+    font-size: $font-m;
+    color: white;
+    background-color: $color-primary;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background-color: $color-secondary;
+        color:black;
+    }
+}
+
+.btn-icon {
+    padding: 20px;
+    color: $color-primary;
+    font-size: $font-xxl;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.btn-like {
+    //padding: 10px;
+    cursor: pointer;
+    color: $color-primary;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
