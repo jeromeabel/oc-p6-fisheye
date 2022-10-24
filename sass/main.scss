@@ -1,6 +1,6 @@
 // Utils
-@import "utils/animations";
-@import "utils/mixins";
+// @import "utils/animations";
+// @import "utils/mixins";
 @import "utils/variables";
 
 // Base
@@ -14,13 +14,14 @@
 @import "components/images";
 @import "components/loader";
 @import "components/modal";
+@import "components/screenreader";
 @import "components/slide";
 
 // Layout
 @import "layout/form";
 @import "layout/grid";
 @import "layout/header";
-@import "layout/slideshow";
+// @import "layout/slideshow";
 
 // Pages
 @import "pages/home";

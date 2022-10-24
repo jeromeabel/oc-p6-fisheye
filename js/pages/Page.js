@@ -1,7 +1,6 @@
 class Page {
     constructor() {
         this.$wrapper = document.querySelector('.page');
-        this.dataURL ='/data/photographers.json';
         this.photographerData = [];
         this.mediaData = [];
 
@@ -11,7 +10,7 @@ class Page {
     }
 
     async getData() {
-         const { photographers, media } = await FetchApi.get(this.dataURL);
+         const { photographers, media } = await PhotographerApi.get();
          this.photographerData = photographers.filter( user => user.id === this.id )[0];
          this.mediaData = media.filter( media => media.photographerId === this.id );
     }
@@ -67,6 +66,10 @@ class Page {
               });
         }
     }
+
+    setContactFormListeners() {
+        const $wrapperForm = new ContactModal(this.photographerData.name);
+    }
     
     async main() {
         await this.getData();
@@ -78,6 +81,8 @@ class Page {
         this.displayMediaGallery();
 
         this.setSlideShowListeners();
+
+        this.setContactFormListeners();
     }  
 }
 

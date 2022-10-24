@@ -19,6 +19,8 @@
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
 
+- [ ] Page - contact : aria-invalid, style, focus, role, aria-label, afficher le contenu dans la console
+
 ## Notes
 
 

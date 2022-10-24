@@ -1,12 +1,11 @@
 class Home {
     constructor() {
         this.$wrapper = document.querySelector('.home');
-        this.dataURL ='/data/photographers.json';
     }
 
     async main() {
         // Get data from .json
-        const { photographers } = await FetchApi.get(this.dataURL);
+        const { photographers } = await PhotographerApi.get();
 
         // Display : add cards to DOM
         for (const photographer of photographers) {

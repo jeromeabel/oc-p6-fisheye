@@ -1,3 +1,20 @@
 .form {
+    font-size: $font-l;
+    form, div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
 
+    input, textarea
+    {
+        font-size: $font-l;
+        margin:0;
+        padding:10px;
+        border:0;
+        border-radius: 5px;
+        width: 100%;
+        display: block;
+    }
 }

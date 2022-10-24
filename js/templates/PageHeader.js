@@ -13,7 +13,7 @@ class PageHeader {
                     <p>${this.data.city}, ${this.data.country}</p>
                     <p>${this.data.tagline}</p>
                 </div>
-                <button class="btn-contact" aria-label="Contactez-moi">Contactez-moi</button>
+                <button class="btn-contact contact__open" aria-label="Contactez-moi">Contactez-moi</button>
                 <img class="page__portrait img-rounded" src="assets/portraits/${this.data.portrait}" alt="Portrait de ${this.data.name}">
             `
 

@@ -44,13 +44,13 @@ button {
   cursor: pointer;
 }
 
-.btn-slide {
+.btn-icon {
   padding: 20px;
   color: #901C1C;
   font-size: 2em;
   cursor: pointer;
 }
-.btn-slide:hover {
+.btn-icon:hover {
   color: #D3573C;
 }
 
@@ -127,13 +127,27 @@ button {
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100wh;
-  height: 100vh;
-  z-index: 1;
+  align-items: center;
+  background-color: #D3573C;
+  color: black;
+  display: none;
+  height: auto;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  z-index: 2;
+}
+.modal__content {
+  padding: 50px;
+}
+.modal__content header {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .show {
@@ -142,6 +156,18 @@ button {
 
 .hide {
   display: none;
+}
+
+.screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .no-scroll {
@@ -183,6 +209,24 @@ button {
   position: absolute;
   top: 50%;
   left: 10px;
+}
+
+.form {
+  font-size: 1.125em;
+}
+.form form, .form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form input, .form textarea {
+  font-size: 1.125em;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
 }
 
 .grid {
