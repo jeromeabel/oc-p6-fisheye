@@ -2,7 +2,7 @@
     width: 170px;
     height: 70px;
     padding: 11px;
-    background-color: $color-primary;
+    padding: 11px;
     border-radius: 5px;
     font-size: $font-l;
     font-weight: normal;
@@ -15,6 +15,16 @@
     color: $color-primary;
     font-size: $font-xxl;
     cursor: pointer;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.btn-like {
+    padding: 10px;
+    cursor: pointer;
+    color: $color-primary;
 
     &:hover {
         color: $color-secondary;

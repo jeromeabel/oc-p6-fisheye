@@ -9,7 +9,11 @@ class VideoCard {
     createCard() {
         this.$wrapper.setAttribute('data-id', this.data.id);
         const card = `
-            <video src="assets/media/large/${this.data.photographerId}/${this.data.video}"></video>
+            <video
+                tabindex="0"
+                class="card-media__media" 
+                src="assets/media/large/${this.data.photographerId}/${this.data.video}">
+            </video>
             <div class="card-media__footer">
                <h2>${this.data.title}</h2>
                <div class="card-media__like">
@@ -22,6 +26,9 @@ class VideoCard {
         return this.$wrapper;
     }
    
+    setLikeListeners() {
+    
+    }
 }
 
 

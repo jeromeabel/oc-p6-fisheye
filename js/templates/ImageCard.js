@@ -3,25 +3,40 @@ class ImageCard {
     this.data = data;
     this.$wrapper = document.createElement('div');
     this.$wrapper.classList.add('card-media');
-    this.$wrapper.setAttribute('tabindex', '0');
+   // this.$wrapper.setAttribute('tabindex', '0');
+    this.likes = data.likes;
+
   }
 
   createCard() {
     this.$wrapper.setAttribute('data-id', this.data.id);
     const card = `
                 <img 
-                alt="${this.data.title}" 
-                src="assets/media/small/${this.data.photographerId}/${this.data.image}">
+                  tabindex="0"
+                  class="card-media__media"
+                  alt="${this.data.title}" 
+                  src="assets/media/small/${this.data.photographerId}/${this.data.image}">
                 <div class="card-media__footer">
                   <h2>${this.data.title}</h2>
                   <div class="card-media__like">
                     <span class="likes">${this.data.likes}</span>
-                    <span class="btn-like">🖤</span>
+                    <span class="btn-like"><i class="fa fa-heart"></i></span>
                   </div>
                 </div>
         `
+
     this.$wrapper.innerHTML = card;
     return this.$wrapper;
+  }
+
+  setLikeListeners() {
+    const btnLike = this.$wrapper.querySelector('.btn-like');
+    const likeNb = this.$wrapper.querySelector('.likes');
+    btnLike.addEventListener('click', (e) => {
+      likeNb.textContent=this.likes+1;
+      e.preventDefault();
+      //btnLike.removeEventListener('click');
+    })
   }
 
 }

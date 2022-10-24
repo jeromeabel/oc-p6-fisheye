@@ -2,7 +2,7 @@
     color: $color-primary;
     width: 350px;
     height:350px;
-    transition:transform 350ms;
+    
 
     img, video {
         height: 300px;
@@ -10,6 +10,12 @@
         object-fit: cover;
         border-radius: 5px;
         display:block;
+        transition:transform 350ms;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03, 1.03);
+        }
     }
 
     h2 {
@@ -23,8 +29,5 @@
         align-items: center;
     }
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.03, 1.03);
-    }
+    
 }

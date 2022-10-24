@@ -37,6 +37,7 @@ class Page {
             if ( media.video ) type = "video";
             const template = new MediaCardFactory(media, type);
             $wrapperGallery.appendChild(template.createCard());
+            template.setLikeListeners();
         }
         
         this.$wrapper.appendChild($wrapperGallery);
@@ -58,12 +59,14 @@ class Page {
         const cards = document.querySelectorAll('.card-media');
         for (const card of cards) {
             const id = card.getAttribute('data-id');
-            card.addEventListener('click', (e) => $wrapperSlideShow.open(id))
+            // click
+            const eltMedia = card.querySelector('.card-media__media');
+            eltMedia.addEventListener('click', () => $wrapperSlideShow.open(id));
             card.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") { 
                     $wrapperSlideShow.open(id); 
                 }
-              });
+            });
         }
     }
 
