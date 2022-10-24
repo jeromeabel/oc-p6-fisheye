@@ -31,7 +31,7 @@
   </header>
 
   <!-- PAGE MAIN-->
-  <main class="main photographer"></main>
+  <main class="main"></main>
 
   <!-- LIGHTBOX MODAL-->
   <div class="modal lightbox"></div>
@@ -40,15 +40,19 @@
   <div class="modal contact"></div>
 
   <!-- JS SCRIPTS -->
-  <script src="./js/api/PhotographerApi.js"></script>
-  <script src="./js/templates/PageHeader.js"></script>
-  <script src="./js/templates/ImageCard.js"></script>
-  <script src="./js/templates/VideoCard.js"></script>
-  <script src="./js/layouts/SlideShowModal.js"></script>
-  <script src="./js/layouts/ContactModal.js"></script>
-  <script src="./js/factories/MediaCardFactory.js"></script>
-  <script src="./js/pages/Page.js"></script>
+  <script src="./js/api/Api.js"></script>
 
+  <!-- Templates -->
+  <script src="./js/templates/PhotographerCard.js"></script>
+  <script src="./js/templates/PhotographerHeader.js"></script>
+
+  <script src="./js/factories/PhotographerFactory.js"></script>
+  <script src="./js/factories/MediaFactory.js"></script>
+
+  <!-- Media -->
+  <script src="./js/models/Media.js"></script>
+
+  <script src="./js/pages/Photographer.js"></script>
 </body>
 
 </html>

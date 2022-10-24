@@ -2,6 +2,7 @@ class PhotographerFactory {
     constructor(data) {
         this.data = data;
         this.cardTemplate = new PhotographerCard(this.data);
+        this.headerTemplate = new PhotographerHeader(this.data);
 
         // this.name = data.name;
         // this.id = data.id;
@@ -14,6 +15,10 @@ class PhotographerFactory {
 
     createPortrait() {
         return this.cardTemplate.create();
+    }
+
+    createHeader() {
+        return this.headerTemplate.create();
     }
 
 
