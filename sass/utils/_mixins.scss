@@ -1,9 +1,0 @@
-@mixin center() {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin debug() {
-    outline: 1px solid red;
-}

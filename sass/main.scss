@@ -1,28 +1,23 @@
 // Utils
-// @import "utils/animations";
-// @import "utils/mixins";
-@import "utils/variables";
+@import "utils/typography.scss";
+@import "utils/visibility.scss";
 
 // Base
-//@import "base/normalize";
 @import "base/base";
 
 // Components
 @import "components/buttons";
-@import "components/card";
-@import "components/card-media";
+@import "components/photographer-card";
+// @import "components/card-media";
 @import "components/images";
-@import "components/loader";
 @import "components/modal";
-@import "components/screenreader";
 @import "components/slide";
 
 // Layout
-@import "layout/form";
+// @import "layout/form";
 @import "layout/grid";
 @import "layout/header";
-// @import "layout/slideshow";
 
 // Pages
-@import "pages/home";
-@import "pages/page";
+// @import "pages/home";
+// @import "pages/page";

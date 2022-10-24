@@ -25,74 +25,19 @@
 <body>
 
   <header class="header" role="banner">
-    <a href="/"><img class="header__logo" src="./assets/logo/logo.png" alt="Fisheye page d'accueil"></a>
+    <a href="/">
+      <img class="header__logo" src="./assets/logo/logo.png" alt="Fisheye page d'accueil">
+    </a>
   </header>
 
   <!-- PAGE MAIN-->
-  <main class="page" aria-hidden="false">
-  </main>
+  <main class="main photographer"></main>
 
-  <!-- SLIDESHOW MODAL-->
-  <div id="slideshow" class="modal hide" aria-label="Slide show des photos" aria-hidden="true" role="dialog">
-    <div class="slide">
-      <button class="btn-icon slide__close" aria-label="Fermer le slideshow">
-        <i class="fa fa-close" aria-hidden="true"></i>
-      </button>
-      <button class="btn-icon slide__prev" aria-label="Image précédente">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-      </button>
-      <button class="btn-icon slide__next" aria-label="Image suivante">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      </button>
-
-      <div class="slide__media">
-        <img class="slide__img hide" src="" alt="">
-        <video class="slide__video hide" src="" controls></video>
-        <p class="slide__name"></p>
-      </div>
-    </div>
-  </div>
+  <!-- LIGHTBOX MODAL-->
+  <div class="modal lightbox"></div>
 
   <!-- CONTACT MODAL-->
-  <div 
-    id="contact-form" 
-    class="modal hide" 
-    aria-label="Formulaire de contact" 
-    aria-hidden="true" 
-    role="dialog"
-    aria-describedby="contactTitle">
-
-    <div class="modal__content">
-
-      <header>
-        <h2 id="contact-title">Contactez-moi</h2>
-        <button class="btn-icon contact__close" aria-label="Fermer le formulaire de contact">
-          <i class="fa fa-close" aria-hidden="true"></i>
-        </button>
-        <!-- <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer modal" /> -->
-      </header>
-
-      <form class="form" role="form">
-        <div role="group" aria-labelledby="coordonnees">
-          <p id="coordonnees" class="screenreader-only">Veuillez entrer vos coordonnées</p>
-          <label if="firstname-label" for="firstname">Prénom</label>
-          <input type="text" name="firstname" id="firstname" aria-labelledby="firstname-label" required>
-          <label if="lastname-label" for="lastname">Nom</label>
-          <input type="text" name="lastname" id="lastname" aria-labelledby="lastname-label" required>
-          <label if="email-label" for="email">Email</label>
-          <input type="email" name="email" id="email" aria-labelledby="email-label" required>
-        </div>
-
-        <label id="message-label" for="message">Message</label>
-        <textarea name="message" id="message" aria-labelledby="message-label" required rows="4">
-        </textarea>
-
-        <button class="btn-contact">Envoyer</button>
-      </form>
-
-    </div>
-  </div>
-
+  <div class="modal contact"></div>
 
   <!-- JS SCRIPTS -->
   <script src="./js/api/PhotographerApi.js"></script>

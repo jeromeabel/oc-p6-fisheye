@@ -1,27 +1,27 @@
 class PhotographerCard {
 
-    constructor(data) {
-        this.data = data;
+    constructor(photographer) {
         this.$wrapper = document.createElement('article');
-        this.$wrapper.classList.add('card');
+        this.$wrapper.classList.add('photographer-card');
+        this.photographer = photographer;
     }
 
-    createCard() {
-        const card = `
-                <div class="card__header">
-                    <a href="photographer.html?id=${this.data.id}" arial-label="${this.data.name}">
-                        <img class="img-rounded" alt="" src="assets/portraits/${this.data.portrait}">
-                        <h2>${this.data.name}</h2>
+    create() {
+        const html = `
+                <div class="photographer-card__header">
+                    <a href="photographer.html?id=${this.photographer.id}" arial-label="${this.photographer.name}">
+                        <img class="img-rounded" alt="" src="assets/portraits/${this.photographer.portrait}">
+                        <h2>${this.photographer.name}</h2>
                     </a>
                 </div>
-                <p class="card__body">
-                    <span class="card__location">${this.data.city}, ${this.data.country}</span>
-                    <span class="card__tagline">${this.data.tagline}</span>
-                    <span class="card__price">${this.data.price}€/jour</span>
+                <p class="photographer-card__body">
+                    <span class="photographer-card__location">${this.photographer.city}, ${this.photographer.country}</span>
+                    <span class="photographer-card__tagline">${this.photographer.tagline}</span>
+                    <span class="photographer-card__price">${this.photographer.price}€/jour</span>
                 </p>
         `
 
-        this.$wrapper.innerHTML = card;
+        this.$wrapper.innerHTML = html;
         return this.$wrapper;
     }
 

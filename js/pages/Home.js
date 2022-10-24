@@ -1,19 +1,31 @@
 class Home {
     constructor() {
-        this.$wrapper = document.querySelector('.home');
+        this.$wrapper = document.createElement('section');
+        this.$parent = document.querySelector('.main');
+        this.api = new PhotographerApi();
+        this.photographers = [];
+    }
+
+    async getData() {
+        const { photographers } = await this.api.getData();
+        for (const photographer of photographers) {
+            this.photographers.push(new PhotographerFactory(photographer));
+        }
+    }
+
+    displayPortraits() {
+        this.$wrapper.classList.add('grid');
+        for (const photographer of this.photographers) {
+            this.$wrapper.appendChild(photographer.createPortrait());
+        }
+        this.$parent.appendChild(this.$wrapper);
     }
 
     async main() {
-        // Get data from .json
-        const { photographers } = await PhotographerApi.get();
-
-        // Display : add cards to DOM
-        for (const photographer of photographers) {
-            const template = new PhotographerCard(photographer);
-            this.$wrapper.appendChild(template.createCard())
-        }
-    }  
+        await this.getData()
+        this.displayPortraits();
+    }
 }
 
-const home = new Home()
-home.main()
+const home = new Home();
+home.main();

@@ -1,45 +1,4 @@
-.no-scroll {
-    height: 100%;
-    overflow: hidden;
-}
 
 .slide {
-    position: relative;
-    height:100vh;
-    background-color: rgba(255, 255,0255 ,0.8);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-primary;
-    text-align: center;
-
-    &__media {
-        width:80%;
-        height:80%;
-    }
-
-    &__video, &__img {
-        height:100%;
-        width:100%;
-        object-fit:contain;
-    }
-
-    &__close {
-        position:absolute;
-        top:10px;
-        right:10px;
-    }
-
-    &__next {
-        position:absolute;
-        top:50%;
-        right:10px;
-    }
-
-    &__prev {
-        position:absolute;
-        top:50%;
-        left:10px;
-    }
 
 }

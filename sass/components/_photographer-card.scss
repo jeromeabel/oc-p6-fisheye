@@ -1,12 +1,7 @@
-/* --------- CARD ---------*/ 
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:8px;
+.photographer-card {
     text-align: center;
+    font-size: $font-m;
+    // outline:1px solid red;
 
     &__header {
 
@@ -30,9 +25,8 @@
     &__body {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        font-size: $font-s;
-        
+        gap: 4px;
+
         span {
             display:block;
         }
@@ -45,5 +39,4 @@
     &__price {
         color: $color-grey;
     }
-    
 }

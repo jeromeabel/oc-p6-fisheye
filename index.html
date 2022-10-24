@@ -20,18 +20,19 @@
   <body>
 
     <header class="header" role="banner">
-        <a href="/"><img class="header__logo" src="./assets/logo/logo.png" alt="Fisheye page d'accueil"></a>
+        <a href="/">
+          <img class="header__logo" src="./assets/logo/logo.png" alt="Fisheye page d'accueil">
+        </a>
         <h1>Nos photographes</h1>
     </header>
 
     <!-- HOME PAGE MAIN-->
-    <main>
-      <section class="home grid"></section>
-    </main>
+    <main class="main"></main>
 
     <!-- JS SCRIPTS -->
-    <script src="./js/api/PhotographerApi.js"></script>
+    <script src="./js/api/Api.js"></script>
     <script src="./js/templates/PhotographerCard.js"></script>
+    <script src="./js/factories/PhotographerFactory.js"></script>
     <script src="./js/pages/Home.js"></script>
   </body>
 </html>

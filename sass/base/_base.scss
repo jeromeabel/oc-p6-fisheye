@@ -11,23 +11,11 @@ body {
     color:black;
 }
 
-header, main, footer {
-    // width: 90%;
-    // min-width:350px;
-    // max-width: 1440px;
-    // margin-inline: auto;
-    padding:20px 0;
+header, main {
+    padding:30px 0;
+    width:90%;
+    margin-inline:auto;
 }
-
-// picture, img {
-//     display: block;
-//     width: 100%;
-//     max-width: 100%;
-// }
-
-// .container {
-    
-// }
 
 a { 
     text-decoration: none;
