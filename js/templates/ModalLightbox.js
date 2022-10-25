@@ -5,11 +5,17 @@ class ModalLightbox {
        this.$wrapper.setAttribute('aria-label', 'Affichage lightbox des photos');
        this.$wrapper.setAttribute('aria-hidden', 'true');
        this.$wrapper.setAttribute('role', 'dialog');
-       //this.$wrapper.setAttribute('aria-describedby', 'lightboxTitle');
+       this.$wrapper.setAttribute('aria-describedby', 'lightboxTitle');
 
-       this.create();
+       this.create(); //??
+       this.$mediaWrapper = document.querySelector('.slide__media');
+       this.index = 0;
+       this.media = [];
+    }
 
-       
+    setMedia(media) {
+      this.media = media;
+     // console.log(this.media);
     }
 
     create(){
@@ -33,36 +39,41 @@ class ModalLightbox {
 
     setListeners(){
       document.querySelector('.slide__next').addEventListener('click', (e) => {
-
+        this.next();
       })
 
       document.querySelector('.slide__prev').addEventListener('click', (e) => {
-
+        this.prev();
       })
     }
 
     setMediaElement(elt) {
-      const $media = document.querySelector('.slide__media');
-
-      let html = ''
-      const type = elt.tagName;
-      if(type === 'IMG') {  
-        html = `
-        <img 
-        src="${elt.getAttribute("src")}" 
-        alt="${elt.getAttribute("alt")}">
-        <p>${elt.getAttribute("alt")}</p>`
-      } else if (type === 'VIDEO') {
-        html = `
-        <video 
-        src="${elt.getAttribute("src")}" 
-        title="${elt.getAttribute("title")}"
-        controls>
-        <p>${elt.getAttribute("title")}</p>`
-      }
-
-      $media.innerHTML = html;
+      const id = parseInt(elt.getAttribute("data-id"));
+      this.index = this.media.findIndex((data) => data.id === id);
+      this.changeMedia()
     }
+
+    changeMedia() {
+      this.$mediaWrapper.innerHTML = " ";
+      const newElement = this.media[this.index].element.cloneNode();
+      if (newElement.tagName === 'VIDEO') newElement.setAttribute("controls", "true");
+      this.$mediaWrapper.appendChild(newElement);
+      const p = document.createElement('p');
+      p.textContent = newElement.title;
+      this.$mediaWrapper.appendChild(p);
+    }
+
+    next() {
+      this.index++;
+      if (this.index >= this.media.length) this.index = 0
+      this.changeMedia()
+  }
+
+  prev() {
+      this.index--;
+      if (this.index < 0) this.index = this.media.length - 1;
+      this.changeMedia()
+  }
 
     getCloseElement() {
       return document.querySelector('.slide__close');

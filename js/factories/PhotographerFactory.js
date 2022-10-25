@@ -15,6 +15,10 @@ class PhotographerFactory {
         return this.data.name;
     }
 
+    get gallery() {
+        return this.galleryTemplate;
+    }
+    
     createPortrait() {
         return this.cardTemplate.create();
     }

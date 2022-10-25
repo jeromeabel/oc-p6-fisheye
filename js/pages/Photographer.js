@@ -25,6 +25,8 @@ class Photographer {
 
         // Create the Photographer
         this.photographer = new PhotographerFactory(photographerData, mediaData);
+
+        this.lightbox.setMedia(this.photographer.gallery.media);
     }
 
     setTitle() {
@@ -48,6 +50,9 @@ class Photographer {
     }
 
     setListeners() {
+
+        this.lightbox.setListeners();
+
 
         // Open Contact Modal
         this.photographer.

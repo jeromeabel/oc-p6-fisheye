@@ -23,6 +23,7 @@ class MediaImage extends Media {
         this.$imgElt.setAttribute('tabindex', '0');
         this.$imgElt.setAttribute('alt', this.title);
         this.$imgElt.setAttribute('src', this.imageSrc);
+        this.$imgElt.setAttribute('data-id', this.id);
     }
 
     get element() {
@@ -44,6 +45,7 @@ class MediaVideo extends Media {
         this.$videoElt = document.createElement('video');
         this.$videoElt.setAttribute('tabindex', '0');
         this.$videoElt.setAttribute('src', this.videoSrc);
+        this.$videoElt.setAttribute('data-id', this.id);
     }
 
     get element() {
