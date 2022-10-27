@@ -3,11 +3,11 @@
         
     img, video {
         height: 300px;
-        width:100%;
+        width: 100%;
         object-fit: cover;
         border-radius: 5px;
-        display:block;
-        transition:transform 350ms;
+        display: block;
+        transition: transform 350ms;
 
         &:hover {
             cursor: pointer;
@@ -16,7 +16,7 @@
     }
 
     h2 {
-        font-weight:normal;
+        font-weight: normal;
         font-size: $font-l;
     }
 
