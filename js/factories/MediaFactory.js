@@ -1,3 +1,5 @@
+// Factory Pattern
+// Return an Media object depending on type
 class MediaFactory {
     constructor(media) {
         if (media.image) {

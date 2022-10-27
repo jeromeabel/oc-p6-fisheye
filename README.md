@@ -25,3 +25,6 @@ Créez un site accessible pour une plateforme de photographes
 - factory method
 - ARIA
 - Template literal strings, create DOM nodes ?
+
+- création éléments, ordre, querySelector undefined...
+- ordre de création innertHTML, appendChilde...

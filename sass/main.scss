@@ -1,4 +1,5 @@
 // Utils
+@import "utils/colors";
 @import "utils/typography";
 @import "utils/visibility";
 
@@ -14,11 +15,7 @@
 @import "components/slide";
 
 // Layout
-// @import "layout/form";
+@import "layout/contact";
 @import "layout/grid";
 @import "layout/header";
-@import "layout/intro";
-
-// Pages
-// @import "pages/home";
-// @import "pages/page";
+@import "layout/photographer-header";

@@ -1,27 +1,27 @@
 class PhotographerHeader {
 
-    constructor(data) {
-        this.data = data;
+    constructor(photographer) {
+        // DOM
         this.$wrapper = document.createElement('div');
-        this.$wrapper.classList.add('intro');
+        this.class = 'photographer-header';
+
+        // Data
+        this.photographer = photographer;
     }
 
     create() {
-        const html = `
-                <div class="intro__text">
-                    <h1>${this.data.name}</h1>
-                    <p>${this.data.city}, ${this.data.country}</p>
-                    <p>${this.data.tagline}</p>
-                </div>
-                <button class="btn-contact contact__open" aria-label="Contactez-moi">Contactez-moi</button>
-                <img class="intro__portrait img-rounded" src="assets/portraits/${this.data.portrait}" alt="Portrait de ${this.data.name}">
+        const html = 
             `
-
+                <div class="${this.class}__text">
+                    <h1>${this.photographer.name}</h1>
+                    <p>${this.photographer.location}</p>
+                    <p>${this.photographer.tagline}</p>
+                </div>
+                <button class="btn" data-open="contact" aria-label="Contactez-moi">Contactez-moi</button>
+                <img class="${this.class}__portrait img-rounded" src="${this.photographer.portraitURL}" alt="Portrait de ${this.photographer.name}">
+            `;
+        this.$wrapper.classList.add(this.class);
         this.$wrapper.innerHTML = html;
         return this.$wrapper;
-    }
-
-    getContactElement() {
-        return document.querySelector('.contact__open');
     }
 }

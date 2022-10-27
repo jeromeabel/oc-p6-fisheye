@@ -2,25 +2,26 @@ class PhotographerCard {
 
     constructor(photographer) {
         this.$wrapper = document.createElement('article');
-        this.$wrapper.classList.add('photographer-card');
+        this.class = 'photographer-card';
+        this.$wrapper.classList.add(this.class);
         this.photographer = photographer;
     }
 
     create() {
+        // Use Template Strings
         const html = `
-                <div class="photographer-card__header">
+                <div class="${this.class}__header">
                     <a href="photographer.html?id=${this.photographer.id}" arial-label="${this.photographer.name}">
-                        <img class="img-rounded" alt="" src="assets/portraits/${this.photographer.portrait}">
+                        <img class="img-rounded" alt="" src="${this.photographer.portraitURL}">
                         <h2>${this.photographer.name}</h2>
                     </a>
                 </div>
-                <p class="photographer-card__body">
-                    <span class="photographer-card__location">${this.photographer.city}, ${this.photographer.country}</span>
-                    <span class="photographer-card__tagline">${this.photographer.tagline}</span>
-                    <span class="photographer-card__price">${this.photographer.price}€/jour</span>
+                <p class="${this.class}__body">
+                    <span class="${this.class}__location">${this.photographer.location}</span>
+                    <span class="${this.class}__tagline">${this.photographer.tagline}</span>
+                    <span class="${this.class}__price">${this.photographer.priceByDay}</span>
                 </p>
-        `
-
+        `;
         this.$wrapper.innerHTML = html;
         return this.$wrapper;
     }

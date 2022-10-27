@@ -1,4 +1,4 @@
-.btn-contact {
+.btn {
     border-radius: 5px;
     padding:15px 10px;
     font-size: $font-m;
@@ -11,6 +11,28 @@
         color:black;
     }
 }
+
+
+.btn-submit {
+width:170px;
+padding:25px 0;
+margin-top:10px;
+}
+
+// .btn-contact {
+//     border-radius: 5px;
+//     padding:15px 10px;
+//     font-size: $font-m;
+//     color: white;
+//     background-color: $color-primary;
+//     cursor: pointer;
+
+//     &:hover, &:focus {
+//         background-color: $color-secondary;
+//         color:black;
+//     }
+// }
+
 
 .btn-icon {
     padding: 20px;
