@@ -2,10 +2,18 @@
 
 
 ## 🎯 To do
-- [ ] images thumbnails
 - [ ] Page - tri : menu déroulant, clavier
 - [ ] Linter
-- [ ] Rapports d'accessibilité : https://achecker.achecks.ca/checker/index.php, ACheckers sans known issues, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, Guide+de+test+d'accessibilité+des+WCAG.pdf, https://validator.w3.org/nu/
+- [ ] Rapports d'accessibilité : 
+    - https://achecker.achecks.ca/checker/index.php
+    - ACheckers sans known issues
+    - Lighthouse
+    - Wave
+    - Axe
+    - HeadingsMap
+    - Kontrast
+    - Guide+de+test+d'accessibilité+des+WCAG.pdf
+    - https://validator.w3.org/nu/
 - [ ] Tests avec un lecteur d'écran 
 - [ ] Documentation, comments, slide
 
