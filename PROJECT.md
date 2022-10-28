@@ -2,18 +2,8 @@
 
 
 ## 🎯 To do
-- [ ] Page - tri : menu déroulant, clavier
 - [ ] Linter
-- [X] Rapports d'accessibilité : 
-    - https://achecker.achecks.ca/checker/index.php
-    - ACheckers sans known issues
-    - Lighthouse
-    - Wave
-    - Axe
-    - HeadingsMap
-    - Kontrast
-    - Guide+de+test+d'accessibilité+des+WCAG.pdf
-    - https://validator.w3.org/nu/
+
 - [ ] Tests avec un lecteur d'écran 
 - [ ] Documentation, comments, slide
 
@@ -36,14 +26,16 @@
 - [x] Page - slideshow, no-scroll, aria-hidden, role dialog, handleFocus (tab), navigation enter keyboard(open), esc, arrows
 - [x] Page - slideshow : focus, trapFocus (tabindex -1)
 - [x] Page - title : specific first
-- [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
+- [x] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
 - [x] Page - contact : aria-invalid (pas besoin), style, handleFocus (tab), role, aria-label, console
 - [x] Page - media card likes : +1
 - [x] Page - likes : somme total
-- [x] Page - tri media : popularité / titre / date
+- [x] Page - tri media : popularité / titre / date, menu clavier/focus
+- [X] Rapports d'accessibilité : achecker.acheck, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, validator
+
 
 
 ## Notes
@@ -153,7 +145,8 @@ https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_t
     - https://betterprogramming.pub/javascript-design-patterns-25f0faaaa15?gi=b5cecd9fc81
     - https://codingcompiler.com/javascript-design-patterns/
 - LINTER : https://www.synbioz.com/blog/tech/un-code-js-impeccable-grace-a-eslint
-
+    - Guide+de+test+d'accessibilité+des+WCAG.pdf
+    - https://validator.w3.org/nu/
 ## Outils d'accessibilité
 - Stratégie de tests d'accessibilité holistique
 - Extensions Chrome:
