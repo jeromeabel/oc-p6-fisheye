@@ -4,14 +4,24 @@
         "es2021": true
     },
     "extends": "eslint:recommended",
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
     "rules": {
+        "no-undef": "error",
         "eqeqeq": "warn",
-        "indent": ["warn", 2, { "SwitchCase": 1 }],
-        "multiline-ternary": ["warn", "always-multiline"]
-      }
+        "no-unused-vars": "error",
+        "indent": [
+            "warn",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "multiline-ternary": [
+            "warn",
+            "always-multiline"
+        ]
+    }
 }

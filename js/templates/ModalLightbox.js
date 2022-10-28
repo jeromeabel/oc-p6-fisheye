@@ -58,7 +58,7 @@ class ModalLightbox {
 
     medialElements.forEach((elt) => {
       const id = parseInt(elt.getAttribute("data-id"));
-      elt.addEventListener('click', (e) => this.setMediaId(id));
+      elt.addEventListener('click', () => this.setMediaId(id));
       elt.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
           this.setMediaId(id);

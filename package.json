@@ -4,7 +4,9 @@
   "description": "Créer un site dynamique Fisheye avec Javascript",
   "main": "index.html",
   "scripts": {
-    "linting": "eslint **/*.js --fix"
+    "lint": "eslint **/*.js",
+    "lint-no-warning" : "eslint --max-warnings=0 .",
+    "lint-fix": "eslint **/*.js --fix"
   },
   "repository": {
     "type": "git",
