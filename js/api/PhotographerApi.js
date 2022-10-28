@@ -6,6 +6,6 @@ class PhotographerApi {
         const url = '/data/photographers.json';
         return fetch(url)
             .then(res => res.json())
-            .catch(err => console.log('Fetch : an error occurs', err));
+            .catch(err => console.log(err));
     }
 }
