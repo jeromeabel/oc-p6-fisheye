@@ -6,8 +6,6 @@ class MediaSort {
     this.$wrapper.classList.add('sort');
     this.$wrapper.setAttribute('aria-label', 'Triez les médias');
 
-    
-
     // Data
     this.count = 0;
     this.media = media;
@@ -17,11 +15,20 @@ class MediaSort {
   create() {
     const html = `
         <p>Trier par</p>
-        <ul class="sort__ul">
-          <li data-sortBy="pop">Popularité</li>
-          <li data-sortBy="date">Date</li>
-          <li data-sortBy="title">Titre</li>
-        </ul>
+
+        <div class="sort__container">
+        <div class="sort__select">
+          <button aria-label="Triez par popularité" data-sortBy="pop">Popularité</button>
+          <div class="sort__select__footer hide">
+          <button aria-label="Triez par date" data-sortBy="date">Date</button>
+          <button aria-label="Triez par titre" data-sortBy="title">Titre</button>
+          </div>
+        </div>
+
+        <button class="sort__btn" aria-label="Ouvrir le menu de tri">
+          <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
+        </button>
+        </div>
         `;
     this.$wrapper.innerHTML = html;
 
@@ -30,12 +37,25 @@ class MediaSort {
   }
 
   setListeners() {
+
+    // Trigger the sort
     const elements =  this.$wrapper.querySelectorAll('[data-sortBy]');
     elements.forEach( (elt) => {
       elt.addEventListener( 'click', (e) => {
         this.sort(elt.getAttribute('data-sortBy'));
       })
     })
+
+    // Open select menu
+    const btn = this.$wrapper.querySelector('.sort__btn');
+    const menu_footer = this.$wrapper.querySelector('.sort__select__footer');
+    const icon =  this.$wrapper.querySelector('.sort__btn__icon');
+    btn.addEventListener('click', (e) => {
+      menu_footer.classList.toggle('hide');
+      if (icon.classList.contains ('fa-arrow-down') ) icon.classList.replace('fa-arrow-down', "fa-arrow-up");
+      else if (icon.classList.contains ('fa-arrow-up') ) icon.classList.replace('fa-arrow-up', "fa-arrow-down");
+    })
+
   }
 
   sort(type) {

@@ -2,6 +2,7 @@
 
 
 ## 🎯 To do
+- [ ] images thumbnails
 - [ ] Page - tri : menu déroulant, clavier
 - [ ] Linter
 - [ ] Rapports d'accessibilité : https://achecker.achecks.ca/checker/index.php, ACheckers sans known issues, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, Guide+de+test+d'accessibilité+des+WCAG.pdf, https://validator.w3.org/nu/
@@ -12,7 +13,7 @@
 ? video sous-titre ou pas d'audio ?
 ? a:link, visited ?
 ?? a aria-current="page" aria-label(significations des liens)
-
+? quand on trie le compteur repars à zéro?
 
 ## 🗹 Done
 - [x] Copie des fichiers media et renommage des dossiers Id
