@@ -46,17 +46,17 @@ class MediaCard {
     
     // Add 1 like or remove it
     this.$wrapper
-        .querySelector('.btn-likes')
-        .addEventListener('click', function() {
-          if (this.classList.contains('liked')) {
-            this.classList.remove('liked')
-            that.likesSubject.fire('ADD', -1);
-            likesWrapper.innerHTML = that.likes;
-          } else {
-            this.classList.add('liked')
-            that.likesSubject.fire('ADD', 1)
-            likesWrapper.innerHTML = that.likes + 1;
-          }
-        })
+      .querySelector('.btn-likes')
+      .addEventListener('click', function() {
+        if (this.classList.contains('liked')) {
+          this.classList.remove('liked')
+          that.likesSubject.fire('ADD', -1);
+          likesWrapper.innerHTML = that.likes;
+        } else {
+          this.classList.add('liked')
+          that.likesSubject.fire('ADD', 1)
+          likesWrapper.innerHTML = that.likes + 1;
+        }
+      })
   }
 }

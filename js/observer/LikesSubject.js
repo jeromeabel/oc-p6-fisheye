@@ -1,18 +1,18 @@
 // Observer Pattern
 class LikesSubject {
-    constructor() {
-        this._observers = []
-    }
+  constructor() {
+    this._observers = []
+  }
 
-    subscribe(observer) {
-        this._observers.push(observer)
-    }
+  subscribe(observer) {
+    this._observers.push(observer)
+  }
 
-    unsubscribe(observer) {
-        this._observers = this._observers.filter(obs => obs !== observer)
-    }
+  unsubscribe(observer) {
+    this._observers = this._observers.filter(obs => obs !== observer)
+  }
 
-    fire(action, value) {
-        this._observers.forEach(observer => observer.update(action, value))
-    }
+  fire(action, value) {
+    this._observers.forEach(observer => observer.update(action, value))
+  }
 }

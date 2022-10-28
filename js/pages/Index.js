@@ -1,35 +1,35 @@
 class Index {
-    constructor() {
-        // DOM
-        this.$parentWrapper = document.querySelector('.main');
-        this.$wrapper = document.createElement('section');
+  constructor() {
+    // DOM
+    this.$parentWrapper = document.querySelector('.main');
+    this.$wrapper = document.createElement('section');
 
-        // Data
-        this.photographers = [];
-    }
+    // Data
+    this.photographers = [];
+  }
 
-    async setData() {
-        const { photographers } = await PhotographerApi.getData();
-        this.photographers = photographers.map( data => new Photographer(data) );
-    }
+  async setData() {
+    const { photographers } = await PhotographerApi.getData();
+    this.photographers = photographers.map( data => new Photographer(data) );
+  }
 
-    createPortraits() {
-        this.$wrapper.classList.add('grid');
+  createPortraits() {
+    this.$wrapper.classList.add('grid');
 
-        this.photographers.forEach(photographer => {
-            const template =  new PhotographerCard(photographer);
-            this.$wrapper.appendChild(template.create());
-        })
+    this.photographers.forEach(photographer => {
+      const template =  new PhotographerCard(photographer);
+      this.$wrapper.appendChild(template.create());
+    })
 
-        this.$parentWrapper.appendChild(this.$wrapper);
-    }
+    this.$parentWrapper.appendChild(this.$wrapper);
+  }
 
-    async main() {
+  async main() {
         
-        await this.setData()
+    await this.setData()
 
-        this.createPortraits();
-    }
+    this.createPortraits();
+  }
 }
 
 const index = new Index();

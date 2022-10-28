@@ -70,7 +70,6 @@ class ModalLightbox {
     const that = this;
     document.addEventListener("keydown", (e) => {
       if (that.$wrapper.getAttribute('aria-hidden') === 'false') {
-        // if (e.key === 'Escape') that.close();
         if (e.key === "ArrowLeft") that.prev();
         else if (e.key === "ArrowRight") that.next();
       }
@@ -111,7 +110,6 @@ class ModalLightbox {
     if (this.index < 0) this.index = this.media.length - 1;
     this.changeMedia()
   }
-
 
   // Handle Tab Event to stay in Modal Elements
   handleFocus() {

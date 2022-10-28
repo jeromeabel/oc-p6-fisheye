@@ -1,0 +1,25 @@
+{
+  "name": "oc-p6-fisheye",
+  "version": "1.0.0",
+  "description": "Créer un site dynamique Fisheye avec Javascript",
+  "main": "index.html",
+  "scripts": {
+    "linting": "eslint **/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromeabel/oc-p6-fisheye.git"
+  },
+  "keywords": [
+    "openclassrooms"
+  ],
+  "author": "Jérôme Abel",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jeromeabel/oc-p6-fisheye/issues"
+  },
+  "homepage": "https://github.com/jeromeabel/oc-p6-fisheye#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0"
+  }
+}

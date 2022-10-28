@@ -30,7 +30,6 @@ class MediaSort {
           </div>
         </div>
 
-
         </div>
         `;
     this.$wrapper.innerHTML = html;
@@ -42,9 +41,9 @@ class MediaSort {
   setListeners() {
 
     // Trigger the sort
-    const elements =  this.$wrapper.querySelectorAll('[data-sortBy]');
-    elements.forEach( (elt) => {
-      elt.addEventListener( 'click', (e) => {
+    const elements = this.$wrapper.querySelectorAll('[data-sortBy]');
+    elements.forEach((elt) => {
+      elt.addEventListener('click', () => {
         this.sort(elt.getAttribute('data-sortBy'));
       })
     })
@@ -52,12 +51,12 @@ class MediaSort {
     // Open/hide dropdown menu
     const btn = this.$wrapper.querySelector('.sort__btn');
     const menu_footer = this.$wrapper.querySelector('.sort__select__footer');
-    const icon =  this.$wrapper.querySelector('.sort__btn__icon');
-    btn.addEventListener('click', (e) => {
+    const icon = this.$wrapper.querySelector('.sort__btn__icon');
+    btn.addEventListener('click', () => {
       menu_footer.classList.toggle('hide');
-      if (icon.classList.contains('fa-arrow-down') ) {
+      if (icon.classList.contains('fa-arrow-down')) {
         icon.classList.replace('fa-arrow-down', "fa-arrow-up");
-      } else if (icon.classList.contains ('fa-arrow-up') ) {
+      } else if (icon.classList.contains('fa-arrow-up')) {
         icon.classList.replace('fa-arrow-up', "fa-arrow-down");
       }
     })
@@ -65,17 +64,17 @@ class MediaSort {
   }
 
   sort(type) {
-    if ( type === "title") {
+    if (type === "title") {
       this.media.sort(function (a, b) {
         return a.title.localeCompare(b.title);
       })
-    } else if ( type === "date") {
+    } else if (type === "date") {
       this.media.sort(function (a, b) {
-         return new Date(b.date) - new Date(a.date);
+        return new Date(b.date) - new Date(a.date);
       })
     } else if (type === "pop") {
       this.media.sort(function (a, b) {
-        return b.likes - a.likes ; // du plus grand au plus petit
+        return b.likes - a.likes; // du plus grand au plus petit
       })
     }
 
@@ -90,8 +89,8 @@ class MediaSort {
 
     // Populate the new sorted gallery
     this.media.forEach(media => {
-        const template = new MediaCard(media, this.likesSubject);
-        this.$wrapperGallery.appendChild(template.create());
+      const template = new MediaCard(media, this.likesSubject);
+      this.$wrapperGallery.appendChild(template.create());
     });
   }
 }

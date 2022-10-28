@@ -2,16 +2,9 @@
 
 
 ## 🎯 To do
-- [ ] Linter
-
+- [ ] Linter : npm init, npm i -D eslint, scripts eslint **/*.js, npm init @eslint/config
 - [ ] Tests avec un lecteur d'écran 
 - [ ] Documentation, comments, slide
-
-
-? video sous-titre ou pas d'audio ?
-? a:link, visited ?
-?? a aria-current="page" aria-label(significations des liens)
-? quand on trie le compteur repars à zéro?
 
 ## 🗹 Done
 - [x] Copie des fichiers media et renommage des dossiers Id
@@ -54,6 +47,10 @@
 
 ## Notes
 
+? video sous-titre ou pas d'audio ?
+? a:link, visited ?
+?? a aria-current="page" aria-label(significations des liens)
+? quand on trie le compteur repars à zéro?
 
 ## Cahier des charges
 
@@ -147,23 +144,23 @@ https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_t
 - LINTER : https://www.synbioz.com/blog/tech/un-code-js-impeccable-grace-a-eslint
     - Guide+de+test+d'accessibilité+des+WCAG.pdf
     - https://validator.w3.org/nu/
+
 ## Outils d'accessibilité
 - Stratégie de tests d'accessibilité holistique
 - Extensions Chrome:
 	- Wave Evaluation Tool (vérificateur d'accessibilité automatisé) ;
 	- aXe (vérificateur d'accessibilité automatisé) ;
 	- HeadingsMap.
-	- Color Contrast Analyzer ??
+	- Color Contrast Analyzer
+    - Lighthouse
 - TPG Colour Contrast Analyser (Mac, Win?)+ Eye Dropper : Kontrast (KDE)
 - Lecteur écran ORCA (Linux)
-- Lecteur d'écran NVDA (utilisateurs de PC uniquement) : https://blog.atalan.fr/tester-accessibilite-web-pdf-lecteur-ecran-nvda/
 - Lecteur d'écran TalkBack (Android)
 - https://validator.w3.org/nu/ + WCAG Parsing Bookmarklet : https://cdpn.io/pen/debug/VRZdGJ
 - Guide+de+test+d'accessibilité+des+WCAG.pdf
 
 https://google.github.io/styleguide/htmlcssguide.html
 https://achecker.achecks.ca/checker/index.php
-Lighthouse
 https://www.a11yproject.com/checklist/
 https://www.w3.org/WAI/design-develop/
 https://www.w3.org/WAI/tutorials/images/functional/
