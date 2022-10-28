@@ -1,11 +1,5 @@
 # PROJECT MANAGEMENT
 
-
-## 🎯 To do
-- [ ] Linter : npm init, npm i -D eslint, scripts eslint **/*.js, npm init @eslint/config
-- [ ] Tests avec un lecteur d'écran 
-- [ ] Documentation, comments, slide
-
 ## 🗹 Done
 - [x] Copie des fichiers media et renommage des dossiers Id
 - [x] Generate thumbnails for photographers
@@ -27,11 +21,10 @@
 - [x] Page - media card likes : +1
 - [x] Page - likes : somme total
 - [x] Page - tri media : popularité / titre / date, menu clavier/focus
-- [X] Rapports d'accessibilité : achecker.acheck, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, validator
-
-
-
-## Notes
+- [x] Rapports d'accessibilité : achecker.acheck, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, validator
+- [x] Linter : npm init, npm i -D eslint, scripts eslint **/*.js, npm init @eslint/config
+- [ ] Tests avec un lecteur d'écran 
+- [ ] Documentation, comments, slide
 
 ## Guidelines
 - #1 - Prendre en main le html, css, js : inspecteur, console.log
@@ -47,34 +40,28 @@
 
 ## Notes
 
+### ?
 ? video sous-titre ou pas d'audio ?
 ? a:link, visited ?
 ?? a aria-current="page" aria-label(significations des liens)
 ? quand on trie le compteur repars à zéro?
 
-## Cahier des charges
+### Difficultés
+- confusion factory pattern : class extends (héritage) vs function factory ?
+- data !! images
+- reprendre le code ou tout refaire 
+- Template literal strings, create DOM nodes ?
+- responsabilités ! accès à tout
+- création éléments, ordre, querySelector undefined...
+- ordre de création innertHTML, appendChilde...
+- this, contextes
+- patterns
 
-- Coding rules : fichiers séparés html/css/js, ES6, Eslint/VsCode, Naming, Comments 
-- Responsive : pas besoin
-- Page accueil
-	- Liste photographes; nom, slogan, localisation, prix/h, image mini
-	- Vignette = lien vers page
-- Page photographe
-	- dynamique ?id=...
-	- galerie media : images / videos (image mini dans la gallerie), titre, nb likes
-	- bouton likes : bouton ++, nb likes total (somme)
-	- tri media : popularité ou titre
-	- lien media : lightbox
-	- lightbox : X fermer, navigation (boutons ou flèches clavier), bouton contact
-	- form contact : modal au dessus, noms/email/message, afficher le contenu dans la console
-- Accessibilité : accessible aux utilisateurs malvoyants 
-    - éléments HTML "sémantiques"
-    - attributs ARIA
-    - attribut “alt” : description textuelle titre photo ou nom du photographe
-    - tests AChecker sans “known issue”
-    - navigation par clavier, Event : KeyboardEvent.key ou KeyboardEvent.code
-    - Utilisez un lecteur d'écran gratuit
-
+### Acquis
+- fetch, async
+- destructuring
+- factory method
+- ARIA
 
 ## Ressources
 
@@ -109,11 +96,9 @@ nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-cur
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
 - ACCESSIBILITY :
-
-https://dev.to/robdodson/managing-focus-64l
-https://web.dev/a11y-for-teams/
-
-https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders
+    - https://dev.to/robdodson/managing-focus-64l
+    - https://web.dev/a11y-for-teams/
+    - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders
     - CHECK LIST : https://www.a11yproject.com/checklist/
     - Pa11y aims to improve the accessibility of the web through better tooling and automation : https://github.com/pa11y
     - balises sémantiques : https://fr.semrush.com/blog/balises-structurelles-html-semantique/
@@ -158,9 +143,8 @@ https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_t
 - Lecteur d'écran TalkBack (Android)
 - https://validator.w3.org/nu/ + WCAG Parsing Bookmarklet : https://cdpn.io/pen/debug/VRZdGJ
 - Guide+de+test+d'accessibilité+des+WCAG.pdf
-
-https://google.github.io/styleguide/htmlcssguide.html
-https://achecker.achecks.ca/checker/index.php
-https://www.a11yproject.com/checklist/
-https://www.w3.org/WAI/design-develop/
-https://www.w3.org/WAI/tutorials/images/functional/
+- https://google.github.io/styleguide/htmlcssguide.html
+- https://achecker.achecks.ca/checker/index.php
+- https://www.a11yproject.com/checklist/
+- https://www.w3.org/WAI/design-develop/
+- https://www.w3.org/WAI/tutorials/images/functional/
