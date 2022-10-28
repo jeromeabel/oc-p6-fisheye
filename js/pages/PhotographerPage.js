@@ -11,11 +11,12 @@ class PhotographerPage {
         // Data
         this.photographer = null;
         this.media = [];
-        this.interactions = [];
 
         // Likes
         this.likesSubject = new LikesSubject();
 
+        // Manage open & close interactions
+        this.openState = new OpenState();
     }
 
     async setData() {
@@ -43,6 +44,7 @@ class PhotographerPage {
         const templateLikes = new PhotographerLikes(this.photographer);
         this.$wrapper.appendChild(templateLikes.create());
         
+        // Likes Counter
         this.likesSubject.subscribe(new LikesCounter());
     }
 
@@ -73,26 +75,18 @@ class PhotographerPage {
     }
 
     handleOpenStates() {
-        // Manage open & close interactions
-        this.openState = new OpenState();
         this.openState.setListeners();
     }
 
+    // Main Process
     async main() {
         await this.setData();
-
         this.setTitle();
-
         this.createLikesCounter();
-        
         this.createHeader();
-
         this.createSorter();
-
         this.createGallery();
-
         this.createModals();
-
         this.handleOpenStates();
     }
 }

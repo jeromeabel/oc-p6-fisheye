@@ -17,6 +17,12 @@ class OpenState {
                 elt.addEventListener('click', (e) => {
                     this.open(state);
                 });
+
+                elt.addEventListener('keydown', (e) => {
+                    if (e.key === "Enter") {
+                        this.open(state);
+                    }
+                });
             });
         })
     }
@@ -54,6 +60,10 @@ class StateModal {
         document.addEventListener("keydown", (e) => {
             if (this.element.getAttribute('aria-hidden') === 'false') {
                 if (e.key === 'Escape') this.close();
+            } else {
+                //console.log(e);
+                //console.log(this);
+                //if (e.key === 'Enter') this.open();
             }
         });
     }

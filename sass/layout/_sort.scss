@@ -28,9 +28,7 @@
                 color: black;
             }
 
-            &:not(:last-child) {
-                border-bottom: 1px solid white;
-            }
+
         }
     }
 
@@ -39,6 +37,7 @@
         button {
             width: 100%;
             display: block;
+            border-top: 1px solid white;
         }
 
     }

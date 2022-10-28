@@ -111,7 +111,7 @@ button {
   color: #901C1C;
 }
 .btn-likes:hover {
-  color: #D3573C;
+  color: black;
 }
 
 .photographer-card {
@@ -312,12 +312,10 @@ button {
 .sort__select button:hover {
   color: black;
 }
-.sort__select button:not(:last-child) {
-  border-bottom: 1px solid white;
-}
 .sort__select__footer button {
   width: 100%;
   display: block;
+  border-top: 1px solid white;
 }
 .sort__btn {
   position: absolute;

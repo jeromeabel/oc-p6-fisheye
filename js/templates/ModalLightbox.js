@@ -55,27 +55,26 @@ class ModalLightbox {
 
     // Set new media when opened
     const medialElements = document.querySelectorAll('[data-id]');
+
     medialElements.forEach((elt) => {
-      elt.addEventListener('click', (e) => {
-        const id = parseInt(elt.getAttribute("data-id"));
-        this.setMediaId(id);
+      const id = parseInt(elt.getAttribute("data-id"));
+      elt.addEventListener('click', (e) => this.setMediaId(id));
+      elt.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          this.setMediaId(id);
+        }
       });
     });
 
-    const that = this;
-
     // Key navigation
+    const that = this;
     document.addEventListener("keydown", (e) => {
-      if( that.$wrapper.getAttribute('aria-hidden') === 'false' ) {
+      if (that.$wrapper.getAttribute('aria-hidden') === 'false') {
         // if (e.key === 'Escape') that.close();
         if (e.key === "ArrowLeft") that.prev();
         else if (e.key === "ArrowRight") that.next();
       }
     });
-  }
-
-  close() {
-
   }
 
   setMediaId(id) {
