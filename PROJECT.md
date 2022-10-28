@@ -2,6 +2,19 @@
 
 
 ## 🎯 To do
+- [ ] Page - tri : menu déroulant, clavier
+- [ ] Linter
+- [ ] Rapports d'accessibilité : https://achecker.achecks.ca/checker/index.php, ACheckers sans known issues, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, Guide+de+test+d'accessibilité+des+WCAG.pdf, https://validator.w3.org/nu/
+- [ ] Tests avec un lecteur d'écran 
+- [ ] Documentation, comments, slide
+
+
+? video sous-titre ou pas d'audio ?
+? a:link, visited ?
+?? a aria-current="page" aria-label(significations des liens)
+
+
+## 🗹 Done
 - [x] Copie des fichiers media et renommage des dossiers Id
 - [x] Generate thumbnails for photographers
 - [x] Clean repository from scratch (sass, js), add structure
@@ -11,21 +24,20 @@
 - [x] Page : template Header, ?id=
 - [x] Page : template Media, MediaFactory
 - [x] Page : corrections noms d'images (error 404)
-- [x] Page - slideshow, no-scroll, aria-hidden, role dialog, focus, enter keyboard(open), esc, arrows
+- [x] Page - slideshow, no-scroll, aria-hidden, role dialog, handleFocus (tab), navigation enter keyboard(open), esc, arrows
 - [x] Page - slideshow : focus, trapFocus (tabindex -1)
 - [x] Page - title : specific first
 - [ ] Home : Test accessibilité (axe, headinmaps, wave, lighthouse, achecker): 
 	- wcag : heading, lang, alt img, alt logo+link, section vs div
 	- css : reset, font-size: px + em, 
 	- card : flex, img fit, font-size, gap, ...
+- [x] Page - contact : aria-invalid (pas besoin), style, handleFocus (tab), role, aria-label, console
+- [x] Page - media card likes : +1
+- [x] Page - likes : somme total
+- [x] Page - tri media : popularité / titre / date
 
-- [ ] Page - contact : aria-invalid, style, focus, role, aria-label, afficher le contenu dans la console
-- [ ] Page - media card likes :
-- [ ] Page - likes
 
 ## Notes
-
-
 
 ## Guidelines
 - #1 - Prendre en main le html, css, js : inspecteur, console.log
@@ -40,42 +52,8 @@
 - #10 - Vérifier le code avec un linter
 
 ## Notes
-- data !! images
-- ? focus
-- ? viewport
-- a title ?
-- ? link, visited, active, focus
-- ? image décorative = css
-
-- function factory ou class factory pattern ?
 
 
-
- https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
-video sous-totre ou pas d'audio ?
-
-https://dev.to/robdodson/managing-focus-64l
-https://web.dev/a11y-for-teams/
-
-
-
-
- clavier
-?? a aria-current="page" aria-label(significations des liens)
-
-
-
-    /**
-     * 
-     * @param {string} url 
-     */
-
-??
-       return fetch(this._url)
-            .then(res => res.json())
-            // .then(res => res.data) //???
-            .catch(err => console.log('an error occurs', err))
-     
 ## Cahier des charges
 
 - Coding rules : fichiers séparés html/css/js, ES6, Eslint/VsCode, Naming, Comments 
@@ -98,7 +76,6 @@ https://web.dev/a11y-for-teams/
     - tests AChecker sans “known issue”
     - navigation par clavier, Event : KeyboardEvent.key ou KeyboardEvent.code
     - Utilisez un lecteur d'écran gratuit
-
 
 
 ## Ressources
@@ -134,6 +111,9 @@ nav aria-label="breadcrumb"> ol li a <li class="breadcrumb-item active" aria-cur
 - SEARCHPARAMS
     - https://developer.mozilla.org/fr/docs/Web/API/URL/searchParams
 - ACCESSIBILITY :
+
+https://dev.to/robdodson/managing-focus-64l
+https://web.dev/a11y-for-teams/
 
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders
     - CHECK LIST : https://www.a11yproject.com/checklist/

@@ -1,0 +1,19 @@
+.like {
+    position: fixed;
+    bottom: 0;
+    right: 100px;
+    width: 250px;
+    z-index: 2;
+    padding: 15px 22px;
+    font-weight: bold;
+    border-radius: 3px 3px 0 0;
+    background-color: $color-secondary;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.liked {
+    color:black;
+}

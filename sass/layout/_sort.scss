@@ -1,0 +1,32 @@
+.sort {
+    display: flex;
+    column-gap:50px;
+    margin-top:50px;
+
+    p {
+        font-weight: bold;
+    }
+    &__ul {
+        display: inline-block;
+        width: 180px;
+        border-radius: 5px;
+        background-color: $color-primary;
+        color:white;
+        padding:0 5px;
+
+        li {
+            display: block;
+            width: 100%;
+            padding:10px 5px;
+
+            &:hover {
+                cursor:pointer;
+                background-color: $color-secondary;
+            }
+        }
+
+        li:not(:last-child){
+            border-bottom:1px solid white;
+        }
+    }
+}

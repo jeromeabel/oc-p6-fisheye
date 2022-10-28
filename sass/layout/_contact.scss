@@ -9,23 +9,24 @@
 
     &__content {
         box-shadow:0px 0px 30px rgb(0,0,0,0.4);
-        width: 600px;
+        width: 500px;
         margin: auto;
         background-color: $color-secondary-light;
-        padding: 0 50px 50px 50px;
+        padding: 30px;
         border-radius: 5px;
+    }
 
-        header {
+    &__header{ 
             width: 100%;
-            padding: 20px 0;
-            margin: 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: $font-xxl;
-            font-style: normal;
-            font-weight: 100;
-        }
+            align-items: baseline;
+            margin-bottom: 15px;
+
+            h2 {
+                font-size: $font-hero;
+                font-style: normal;
+            }
     }
 
     &__form {
@@ -34,59 +35,25 @@
         div {
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            font-size: $font-xxl;
+            gap: 2px;
+            font-size: $font-xl;
             color: $color-grey-dark;
         }
 
         input,
         textarea {
             color: $color-grey-dark;
-            font-size: $font-xl;
+            font-size: $font-m;
             margin: 0;
-            padding: 5px;
+            padding: 8px;
             border: 0;
             border-radius: 5px;
             width: 100%;
             display: block;
         }
-
-
     }
 
     &__message {
-            margin:10px 0;
-
+        margin:5px 0;
     }
 }
-
-
-
-
-// .contact {
-
-//     &__content  {
-
-//         position: relative;
-//         height:100%;
-//         display:flex;
-//         align-items: center;
-//         justify-content: center;
-
-//         // margin:auto;
-//         // position: relative;
-//         // width:500px;
-//         // height:auto;
-//         // background-color: $color-secondary;
-//         // padding: 50px;
-
-
-//        }
-
-
-//        &__form {
-//         font-size: $font-l;
-
-
-//     }
-// }

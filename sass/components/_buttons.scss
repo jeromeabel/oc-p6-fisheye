@@ -1,10 +1,10 @@
 .btn {
-    border-radius: 5px;
-    padding:15px 10px;
+    width:150px;
+    padding:20px;
     font-size: $font-m;
     color: white;
     background-color: $color-primary;
-    cursor: pointer;
+    border-radius: 5px;
 
     &:hover, &:focus {
         background-color: $color-secondary;
@@ -14,9 +14,7 @@
 
 
 .btn-submit {
-width:170px;
-padding:25px 0;
-margin-top:10px;
+    margin-top:10px;
 }
 
 // .btn-contact {
@@ -38,16 +36,24 @@ margin-top:10px;
     padding: 20px;
     color: $color-primary;
     font-size: $font-xxl;
-    cursor: pointer;
 
-    &:hover {
+    &:hover, &:focus {
         color: $color-secondary;
     }
 }
 
-.btn-like {
+.btn-close-contact {
+    padding: 0;
+    color: white;
+    font-size: $font-hero;
+
+    &:hover, &:focus {
+        color: $color-secondary;
+    }
+}
+
+.btn-likes {
     //padding: 10px;
-    cursor: pointer;
     color: $color-primary;
 
     &:hover {

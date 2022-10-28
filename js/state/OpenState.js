@@ -11,12 +11,11 @@ class OpenState {
 
     setListeners() {
         // Define an event listener for all elements with "data-open" attribute
-        this.states.forEach( (state) => {
+        this.states.forEach((state) => {
             const interactiveElements = document.querySelectorAll(`[data-open=${state.className}`);
-            interactiveElements.forEach( (elt) => {
+            interactiveElements.forEach((elt) => {
                 elt.addEventListener('click', (e) => {
                     this.open(state);
-                    console.log(state);
                 });
             });
         })
@@ -24,8 +23,8 @@ class OpenState {
 
     open(state) {
         state.open();
-        const statesToClose = this.states.filter( (_state) => _state.className !== state.className );
-        statesToClose.forEach( (state) => {
+        const statesToClose = this.states.filter((_state) => _state.className !== state.className);
+        statesToClose.forEach((state) => {
             state.close();
         })
     }
@@ -33,34 +32,45 @@ class OpenState {
 
 // Modal state : switch display classes and ARIA
 class StateModal {
-    constructor (className) {
+    constructor(className) {
         this.className = className;
         this.element = document.querySelector(`.${this.className}`);
+        this.handleEsc();
     }
 
-    open(){
+    open() {
         this.element.classList.replace('hide', 'show');
         this.element.setAttribute('aria-hidden', 'false');
+        this.element.focus();
     }
 
     close() {
         this.element.setAttribute('aria-hidden', 'true');
         this.element.classList.replace('show', 'hide');
     }
+
+    // Key "Escape" : close the modal
+    handleEsc() {
+        document.addEventListener("keydown", (e) => {
+            if (this.element.getAttribute('aria-hidden') === 'false') {
+                if (e.key === 'Escape') this.close();
+            }
+        });
+    }
 }
 
 // Main state : switch ARIA
 class StateMain {
-    constructor (className) {
+    constructor(className) {
         this.className = className;
         this.element = document.querySelector(`.${this.className}`);
         this.$body = document.body;
     }
 
-    open(){
+    open() {
         this.element.setAttribute('aria-hidden', 'false');
         this.$body.classList.remove('no-scroll');
-        
+        this.element.focus();
     }
 
     close() {
@@ -68,25 +78,3 @@ class StateMain {
         this.$body.classList.add('no-scroll');
     }
 }
-
-
-/*        this.$wrapper.classList.add('show');
-        this.$wrapper.classList.remove('hide');
-        this.$wrapper.setAttribute('aria-hidden', 'false');
-        
-        this.$wrapper.focus();
-
-        this.$page.setAttribute('aria-hidden', 'true');
-        this.$body.classList.add('no-scroll');
-    }
-
-    close() {
-        this.opened = false;
-
-        this.$wrapper.classList.remove('show');
-        this.$wrapper.classList.add('hide');
-        this.$wrapper.setAttribute('aria-hidden', 'true');
-        this.$wrapper.setAttribute('aria-modal', 'false');
-        this.$page.setAttribute('aria-hidden', 'false');
-        this.$body.classList.remove('no-scroll');
-        */

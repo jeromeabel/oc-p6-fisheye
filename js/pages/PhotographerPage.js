@@ -13,8 +13,9 @@ class PhotographerPage {
         this.media = [];
         this.interactions = [];
 
-        // Manage open & close interactions
-        this.openState = new OpenState();
+        // Likes
+        this.likesSubject = new LikesSubject();
+
     }
 
     async setData() {
@@ -38,37 +39,42 @@ class PhotographerPage {
         this.$wrapper.appendChild(headerTemplate.create());
     }
 
-    createFilter() {
+    createLikesCounter() {
+        const templateLikes = new PhotographerLikes(this.photographer);
+        this.$wrapper.appendChild(templateLikes.create());
+        
+        this.likesSubject.subscribe(new LikesCounter());
+    }
 
+    createSorter() {
+        const templateSort = new MediaSort(this.media, this.likesSubject);
+        this.$wrapper.appendChild(templateSort.create());
     }
 
     createGallery() {
-        const $wrapperGallery = document.createElement('section');
-        $wrapperGallery.classList.add('gallery');
-        $wrapperGallery.classList.add('grid');
+        this.$wrapperGallery = document.createElement('section');
+        this.$wrapperGallery.classList.add('gallery');
+        this.$wrapperGallery.classList.add('grid');
 
         this.media.forEach(media => {
-            const template = new MediaCard(media);
-            $wrapperGallery.appendChild(template.create());
+            const template = new MediaCard(media, this.likesSubject);
+            this.$wrapperGallery.appendChild(template.create());
         })
 
-        this.$wrapper.appendChild($wrapperGallery);
-    }
-
-    createLikes() {
-
+        this.$wrapper.appendChild(this.$wrapperGallery);
     }
 
     createModals() {
         const lightbox = new ModalLightbox(this.media);
         lightbox.create();
-        lightbox.setListeners();
 
         const contact = new ModalContact(this.photographer.name);
         contact.create();
     }
 
-    setListeners() {
+    handleOpenStates() {
+        // Manage open & close interactions
+        this.openState = new OpenState();
         this.openState.setListeners();
     }
 
@@ -77,17 +83,17 @@ class PhotographerPage {
 
         this.setTitle();
 
+        this.createLikesCounter();
+        
         this.createHeader();
 
-        this.createFilter();
+        this.createSorter();
 
         this.createGallery();
 
-        this.createLikes();
-
         this.createModals();
 
-        this.setListeners();
+        this.handleOpenStates();
     }
 }
 

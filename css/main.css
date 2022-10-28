@@ -69,15 +69,16 @@ ul, ol {
 button {
   border-style: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .btn {
-  border-radius: 5px;
-  padding: 15px 10px;
+  width: 150px;
+  padding: 20px;
   font-size: 1em;
   color: white;
   background-color: #901C1C;
-  cursor: pointer;
+  border-radius: 5px;
 }
 .btn:hover, .btn:focus {
   background-color: #D3573C;
@@ -85,8 +86,6 @@ button {
 }
 
 .btn-submit {
-  width: 170px;
-  padding: 25px 0;
   margin-top: 10px;
 }
 
@@ -94,17 +93,24 @@ button {
   padding: 20px;
   color: #901C1C;
   font-size: 2em;
-  cursor: pointer;
 }
-.btn-icon:hover {
+.btn-icon:hover, .btn-icon:focus {
   color: #D3573C;
 }
 
-.btn-like {
-  cursor: pointer;
+.btn-close-contact {
+  padding: 0;
+  color: white;
+  font-size: 2.5em;
+}
+.btn-close-contact:hover, .btn-close-contact:focus {
+  color: #D3573C;
+}
+
+.btn-likes {
   color: #901C1C;
 }
-.btn-like:hover {
+.btn-likes:hover {
   color: #D3573C;
 }
 
@@ -185,27 +191,9 @@ button {
   width: 100wh;
   height: 100vh;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
-/*
-
-
-   align-items: center;
-   background-color: $color-secondary;
-   color: black;
-   display: none;
-   height: auto;
-   justify-content: center;
-   left: 50%;
-   position: absolute;
-   top: 50%;
-   transform: translate(-50%, -50%);
-   width: 700px;
-   z-index: 2;
-
-
-*/
 .slide {
   position: relative;
   height: 100%;
@@ -255,44 +243,74 @@ button {
 }
 .contact__content {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
-  width: 600px;
+  width: 500px;
   margin: auto;
   background-color: #d38674;
-  padding: 0 50px 50px 50px;
+  padding: 30px;
   border-radius: 5px;
 }
-.contact__content header {
+.contact__header {
   width: 100%;
-  padding: 20px 0;
-  margin: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 2em;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+.contact__header h2 {
+  font-size: 2.5em;
   font-style: normal;
-  font-weight: 100;
 }
 .contact__form form,
 .contact__form div {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 2em;
+  gap: 2px;
+  font-size: 1.5em;
   color: #3d3d3d;
 }
 .contact__form input,
 .contact__form textarea {
   color: #3d3d3d;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0;
-  padding: 5px;
+  padding: 8px;
   border: 0;
   border-radius: 5px;
   width: 100%;
   display: block;
 }
 .contact__message {
-  margin: 10px 0;
+  margin: 5px 0;
+}
+
+.sort {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  margin-top: 50px;
+}
+.sort p {
+  font-weight: bold;
+}
+.sort__ul {
+  display: inline-block;
+  width: 180px;
+  border-radius: 5px;
+  background-color: #901C1C;
+  color: white;
+  padding: 0 5px;
+}
+.sort__ul li {
+  display: block;
+  width: 100%;
+  padding: 10px 5px;
+}
+.sort__ul li:hover {
+  cursor: pointer;
+  background-color: #D3573C;
+}
+.sort__ul li:not(:last-child) {
+  border-bottom: 1px solid white;
 }
 
 .grid {
@@ -338,4 +356,24 @@ button {
 .photographer-header__portrait {
   height: 200px;
   width: 200px;
+}
+
+.like {
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  width: 250px;
+  z-index: 2;
+  padding: 15px 22px;
+  font-weight: bold;
+  border-radius: 3px 3px 0 0;
+  background-color: #D3573C;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.liked {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

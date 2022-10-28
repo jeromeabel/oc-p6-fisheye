@@ -26,5 +26,9 @@ Créez un site accessible pour une plateforme de photographes
 - ARIA
 - Template literal strings, create DOM nodes ?
 
+- responsabilités ! accès à tout
 - création éléments, ordre, querySelector undefined...
 - ordre de création innertHTML, appendChilde...
+- this, contextes
+
+- patterns

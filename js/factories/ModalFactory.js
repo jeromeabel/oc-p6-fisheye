@@ -1,3 +1,4 @@
+// inutile ?
 class ModalFactory {
     constructor(type) {
         if (type === "contact") {
