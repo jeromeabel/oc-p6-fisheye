@@ -17,17 +17,17 @@ class MediaSort {
         <p>Trier par</p>
 
         <div class="sort__container">
-        <div class="sort__select">
-          <button aria-label="Triez par popularité" data-sortBy="pop">Popularité</button>
-          <div class="sort__select__footer hide">
-          <button aria-label="Triez par date" data-sortBy="date">Date</button>
-          <button aria-label="Triez par titre" data-sortBy="title">Titre</button>
+          <div class="sort__select">
+            <button aria-label="Triez par popularité" data-sortBy="pop">Popularité</button>
+            <div class="sort__select__footer hide">
+            <button aria-label="Triez par date" data-sortBy="date">Date</button>
+            <button aria-label="Triez par titre" data-sortBy="title">Titre</button>
+            </div>
           </div>
-        </div>
 
-        <button class="sort__btn" aria-label="Ouvrir le menu de tri">
-          <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
-        </button>
+          <button class="sort__btn" aria-label="Ouvrir le menu de tri">
+            <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
+          </button>
         </div>
         `;
     this.$wrapper.innerHTML = html;
@@ -78,13 +78,13 @@ class MediaSort {
 
   updateGallery() {
     // Reset Gallery and Counter
-    this.likesSubject.fire("RESET", 0);
+    //this.likesSubject.fire("RESET", 0);
     this.$wrapperGallery = document.querySelector('.gallery');
     this.$wrapperGallery.innerHTML = "";
 
     // Populate the new sorted gallery
     this.media.forEach(media => {
-        const template = new MediaCard(media, this.likesSubject);
+        const template = new MediaCard(media, this.likesSubject, this.media);
         this.$wrapperGallery.appendChild(template.create());
     });
   }

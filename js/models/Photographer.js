@@ -10,7 +10,7 @@ class Photographer {
         this.price = data.price;
         this.portrait = data.portrait;
     }
-
+    
     get location() { 
         return `${this.city}, ${this.country}`;
     }

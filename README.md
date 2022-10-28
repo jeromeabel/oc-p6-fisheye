@@ -31,3 +31,4 @@ Créez un site accessible pour une plateforme de photographes
 - destructuring
 - factory method
 - ARIA
+- array. map, filter, sort

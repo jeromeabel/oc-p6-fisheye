@@ -59,7 +59,7 @@ class PhotographerPage {
         this.$wrapperGallery.classList.add('grid');
 
         this.media.forEach(media => {
-            const template = new MediaCard(media, this.likesSubject);
+            const template = new MediaCard(media, this.likesSubject, this.media);
             this.$wrapperGallery.appendChild(template.create());
         })
 

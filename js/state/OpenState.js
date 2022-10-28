@@ -29,6 +29,8 @@ class OpenState {
 
     open(state) {
         state.open();
+
+        // Close others 
         const statesToClose = this.states.filter((_state) => _state.className !== state.className);
         statesToClose.forEach((state) => {
             state.close();
@@ -60,10 +62,6 @@ class StateModal {
         document.addEventListener("keydown", (e) => {
             if (this.element.getAttribute('aria-hidden') === 'false') {
                 if (e.key === 'Escape') this.close();
-            } else {
-                //console.log(e);
-                //console.log(this);
-                //if (e.key === 'Enter') this.open();
             }
         });
     }
@@ -75,16 +73,5 @@ class StateMain {
         this.className = className;
         this.element = document.querySelector(`.${this.className}`);
         this.$body = document.body;
-    }
-
-    open() {
-        this.element.setAttribute('aria-hidden', 'false');
-        this.$body.classList.remove('no-scroll');
-        this.element.focus();
-    }
-
-    close() {
-        this.element.setAttribute('aria-hidden', 'true');
-        this.$body.classList.add('no-scroll');
     }
 }

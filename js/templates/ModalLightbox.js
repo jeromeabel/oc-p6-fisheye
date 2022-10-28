@@ -35,7 +35,7 @@ class ModalLightbox {
 
           <div class="slide__media"></div>
       </div>
-        `
+      `
     this.$wrapper.innerHTML = html;
 
     this.setListeners();
@@ -111,7 +111,6 @@ class ModalLightbox {
     if (this.index < 0) this.index = this.media.length - 1;
     this.changeMedia()
   }
-
 
   // Handle Tab Event to stay in Modal Elements
   handleFocus() {

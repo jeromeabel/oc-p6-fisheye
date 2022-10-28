@@ -1,6 +1,6 @@
 class MediaCard {
 
-  constructor(media, likesSubject) {
+  constructor(media, likesSubject, allMedia) {
     // DOM
     this.$wrapper = document.createElement('div');
     this.class = 'media-card';
@@ -12,6 +12,7 @@ class MediaCard {
     this.title = media.title;
     this.likes = media.likes;
     this.likesSubject = likesSubject;
+    this.allMedia = allMedia;
   }
 
   create() {
@@ -44,19 +45,38 @@ class MediaCard {
 
     const likesWrapper = this.$wrapper.querySelector('.likes');
     
+    const currentMedia = that.allMedia.find( ( media ) => media.id === that.id );
+
+
     // Add 1 like or remove it
     this.$wrapper
         .querySelector('.btn-likes')
         .addEventListener('click', function() {
-          if (this.classList.contains('liked')) {
-            this.classList.remove('liked')
+          if (this.classList.contains('liked') && currentMedia.liked) {
+            this.classList.remove('liked');
             that.likesSubject.fire('ADD', -1);
-            likesWrapper.innerHTML = that.likes;
+            currentMedia.likes--;
+            // that.likes--;
+            // console.log(that.allMedia);
+            currentMedia.liked = false;
+           // likesWrapper.innerHTML = that.likes;
+            likesWrapper.innerHTML = currentMedia.likes;
+
+
           } else {
-            this.classList.add('liked')
+            this.classList.add('liked');
             that.likesSubject.fire('ADD', 1)
-            likesWrapper.innerHTML = that.likes + 1;
+           
+            // const currentMedia = that.allMedia.find( ( media ) => media.id === that.id );
+            currentMedia.likes++;
+            currentMedia.liked = true;
+
+            likesWrapper.innerHTML = currentMedia.likes;
+            // that.likes++;
+
+            // console.log("AllMedia: ");
+            // console.log(that.allMedia);
           }
         })
-  }
+    }
 }
