@@ -4,7 +4,7 @@
 ## 🎯 To do
 - [ ] Page - tri : menu déroulant, clavier
 - [ ] Linter
-- [ ] Rapports d'accessibilité : 
+- [X] Rapports d'accessibilité : 
     - https://achecker.achecks.ca/checker/index.php
     - ACheckers sans known issues
     - Lighthouse

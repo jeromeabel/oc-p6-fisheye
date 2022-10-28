@@ -309,8 +309,9 @@ button {
   color: white;
   font-size: 1em;
 }
-.sort__select button:hover {
+.sort__select button:hover, .sort__select button:focus {
   color: black;
+  background-color: #D3573C;
 }
 .sort__select__footer button {
   width: 100%;

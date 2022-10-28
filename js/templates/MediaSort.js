@@ -17,7 +17,12 @@ class MediaSort {
         <p>Trier par</p>
 
         <div class="sort__container">
-        <div class="sort__select">
+
+        <button class="sort__btn" aria-label="Ouvrir le menu de tri">
+        <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
+      </button>
+
+        <div class="sort__select" >
           <button aria-label="Triez par popularité" data-sortBy="pop">Popularité</button>
           <div class="sort__select__footer hide">
           <button aria-label="Triez par date" data-sortBy="date">Date</button>
@@ -25,9 +30,7 @@ class MediaSort {
           </div>
         </div>
 
-        <button class="sort__btn" aria-label="Ouvrir le menu de tri">
-          <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
-        </button>
+
         </div>
         `;
     this.$wrapper.innerHTML = html;
@@ -46,14 +49,17 @@ class MediaSort {
       })
     })
 
-    // Open select menu
+    // Open/hide dropdown menu
     const btn = this.$wrapper.querySelector('.sort__btn');
     const menu_footer = this.$wrapper.querySelector('.sort__select__footer');
     const icon =  this.$wrapper.querySelector('.sort__btn__icon');
     btn.addEventListener('click', (e) => {
       menu_footer.classList.toggle('hide');
-      if (icon.classList.contains ('fa-arrow-down') ) icon.classList.replace('fa-arrow-down', "fa-arrow-up");
-      else if (icon.classList.contains ('fa-arrow-up') ) icon.classList.replace('fa-arrow-up', "fa-arrow-down");
+      if (icon.classList.contains('fa-arrow-down') ) {
+        icon.classList.replace('fa-arrow-down', "fa-arrow-up");
+      } else if (icon.classList.contains ('fa-arrow-up') ) {
+        icon.classList.replace('fa-arrow-up', "fa-arrow-down");
+      }
     })
 
   }

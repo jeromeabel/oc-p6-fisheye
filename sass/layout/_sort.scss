@@ -24,40 +24,38 @@
             color: white;
             font-size: $font-m;
 
+            &:hover,
+            &:focus {
+                color: black;
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+        &__select__footer {
+            button {
+                width: 100%;
+                display: block;
+                border-top: 1px solid white;
+            }
+        }
+
+        &__btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+            z-index: 1;
+            font-size: $font-l;
+
             &:hover {
                 color: black;
             }
-
-
-        }
-    }
-
-    &__select__footer {
-
-        button {
-            width: 100%;
-            display: block;
-            border-top: 1px solid white;
         }
 
-    }
-
-    &__btn {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
-        color: white;
-        padding: 10px;
-        z-index: 1;
-        font-size: $font-l;
-
-        &:hover {
-            color: black;
+        p {
+            font-weight: bold;
         }
     }
-
-    p {
-        font-weight: bold;
-    }
-}
