@@ -18,17 +18,16 @@ Créez un site accessible pour une plateforme de photographes
 - confusion factory pattern : class extends (héritage) vs function factory ?
 - data !! images
 - reprendre le code ou tout refaire 
+- Template literal strings, create DOM nodes ?
+- responsabilités ! accès à tout
+- création éléments, ordre, querySelector undefined...
+- ordre de création innertHTML, appendChilde...
+- this, contextes
+- patterns
+
 
 ## Acquis
 - fetch, async
 - destructuring
 - factory method
 - ARIA
-- Template literal strings, create DOM nodes ?
-
-- responsabilités ! accès à tout
-- création éléments, ordre, querySelector undefined...
-- ordre de création innertHTML, appendChilde...
-- this, contextes
-
-- patterns
