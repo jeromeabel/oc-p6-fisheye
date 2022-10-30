@@ -23,7 +23,7 @@
 - [x] Page - tri media : popularité / titre / date, menu clavier/focus
 - [x] Rapports d'accessibilité : achecker.acheck, Lighthouse, Wave, Axe, HeadingsMap, Kontrast, validator
 - [x] Linter : npm init, npm i -D eslint, scripts eslint **/*.js, npm init @eslint/config
-- [ ] Tests avec un lecteur d'écran 
+- [x] Tests avec un lecteur d'écran 
 - [ ] Documentation, comments, slide
 
 ## Guidelines
