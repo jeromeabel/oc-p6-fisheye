@@ -33,8 +33,8 @@ class MediaCard {
     this.$wrapper.appendChild(footerElt);
 
     // Update Likes Counter
-    this.setListener();
-    this.likesSubject.fire('ADD', this.likes );
+    //this.setListener();
+    //this.likesSubject.fire('ADD', this.likes );
     
     return this.$wrapper;
   }

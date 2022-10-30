@@ -83,7 +83,8 @@ class MediaSort {
 
   updateGallery() {
     // Reset Gallery and Counter
-    this.likesSubject.fire("RESET", 0);
+    //this.likesSubject.fire("RESET", 0);
+
     this.$wrapperGallery = document.querySelector('.gallery');
     this.$wrapperGallery.innerHTML = "";
 

@@ -38,9 +38,22 @@ class ModalLightbox {
         `
     this.$wrapper.innerHTML = html;
 
-    this.setListeners();
-    this.handleFocus();
+    //this.setListeners();
+    //this.handleFocus();
   }
+
+  open(id) {
+    this.setMediaId(id);
+    this.$wrapper.classList.replace('hide', 'show');
+    this.$wrapper.setAttribute('aria-hidden', 'false');
+    this.$wrapper.focus();
+  }
+
+  close() {
+    this.$wrapper.setAttribute('aria-hidden', 'true');
+    this.$wrapper.classList.replace('show', 'hide');
+  }
+
 
   setListeners() {
 

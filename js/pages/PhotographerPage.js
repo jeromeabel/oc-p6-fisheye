@@ -67,15 +67,16 @@ class PhotographerPage {
   }
 
   createModals() {
-    const lightbox = new ModalLightbox(this.media);
-    lightbox.create();
+    this.lightbox = new ModalLightbox(this.media);
+    this.lightbox.create();
 
     const contact = new ModalContact(this.photographer.name);
     contact.create();
   }
 
   handleOpenStates() {
-    this.openState.setListeners();
+    //this.openState.setListeners();
+    const interactions = new Interactions(this.lightbox);
   }
 
   // Main Process
