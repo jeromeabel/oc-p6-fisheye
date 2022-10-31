@@ -9,19 +9,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "no-undef": "error",
-        "eqeqeq": "warn",
-        "no-unused-vars": "error",
-        "indent": [
-            "warn",
-            2,
-            {
-                "SwitchCase": 1
-            }
-        ],
-        "multiline-ternary": [
-            "warn",
-            "always-multiline"
-        ]
+        "no-undef": "warn",
+        "no-unused-vars": "off"
     }
 }
