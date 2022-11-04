@@ -32,11 +32,11 @@ class ModalContact {
             <div role="group" aria-labelledby="coordonnees">
               <p id="coordonnees" class="screenreader-only">Veuillez entrer vos coordonnées</p>
               <label if="firstname-label" for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname" aria-labelledby="firstname-label">
+              <input type="text" name="firstname" id="firstname">
               <label if="lastname-label" for="lastname">Nom</label>
-              <input type="text" name="lastname" id="lastname" aria-labelledby="lastname-label">
+              <input type="text" name="lastname" id="lastname">
               <label if="email-label" for="email">Email</label>
-              <input type="email" name="email" id="email" aria-labelledby="email-label">
+              <input type="email" name="email" id="email">
             </div>
   
             <div role="group" class="contact__message" aria-labelledby="message-title">
