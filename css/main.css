@@ -98,6 +98,20 @@ button {
   color: #D3573C;
 }
 
+input.btn.btn-submit {
+  display: inline-block;
+  width: 150px;
+  padding: 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #901C1C;
+  border-radius: 5px;
+}
+input.btn.btn-submit:hover, input.btn.btn-submit:focus {
+  background-color: #D3573C;
+  color: black;
+}
+
 .btn-close-contact {
   padding: 0;
   color: white;

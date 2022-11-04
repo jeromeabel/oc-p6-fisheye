@@ -32,20 +32,20 @@ class ModalContact {
             <div role="group" aria-labelledby="coordonnees">
               <p id="coordonnees" class="screenreader-only">Veuillez entrer vos coordonnées</p>
               <label if="firstname-label" for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname">
+              <input type="text" name="firstname" id="firstname" class="contact__input" required>
               <label if="lastname-label" for="lastname">Nom</label>
-              <input type="text" name="lastname" id="lastname">
+              <input type="text" name="lastname" id="lastname"  class="contact__input" required>
               <label if="email-label" for="email">Email</label>
-              <input type="email" name="email" id="email">
+              <input type="email" name="email" id="email"  class="contact__input" required>
             </div>
   
             <div role="group" class="contact__message" aria-labelledby="message-title">
               <p id="message-title" class="screenreader-only">Veuillez entrer votre message</p>
               <label id="message-label" for="message">Votre message</label>
-              <textarea name="message" id="message" aria-labelledby="message-label" rows="3"></textarea>
+              <textarea name="message" id="message" aria-labelledby="message-label" rows="3"  class="contact__input" required></textarea>
             </div>
     
-            <button class="btn btn-submit" data-open="main">Envoyer</button>
+            <input type="submit" class="btn btn-submit" value="Envoyer">
           </form>
       </div>
       </div>
@@ -57,22 +57,39 @@ class ModalContact {
   }
 
   setListener(){
-    const btn = this.$wrapper.querySelector('button.btn-submit');
+    const btn = this.$wrapper.querySelector('.btn-submit');
+
     const that = this;
+    
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const allInputs = that.$wrapper.querySelectorAll('.contact__input');
 
-      console.group("Valeurs des champs du formulaire");
+      let isValid = true;
 
-      const allInputs = that.$wrapper.querySelectorAll('input');
       allInputs.forEach( (elt) => {
-        console.log(`${elt.getAttribute('id')} : ${elt.value}`);
+        if (elt.value.length === 0) {
+          isValid = false;
+        }
       });
 
-      const textarea = that.$wrapper.querySelector('#message');
-      console.log(`${textarea.getAttribute('id')} : ${textarea.value}`);
-      
-      console.groupEnd();
+      if (isValid) {
+        console.group("Valeurs des champs du formulaire");
+
+        allInputs.forEach( (elt) => {
+          console.log(`${elt.getAttribute('id')} : ${elt.value}`);
+        });
+
+        // Open main
+        const mainPage = document.querySelector('.main');
+        mainPage.setAttribute('aria-hidden', 'false');
+        mainPage.focus();
+
+        // Close
+        this.$wrapper.setAttribute('aria-hidden', 'true');
+        this.$wrapper.classList.replace('show', 'hide');
+      }
+
     });
   }
 
