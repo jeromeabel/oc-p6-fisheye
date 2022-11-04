@@ -19,7 +19,7 @@ class MediaSort {
         <div class="sort__container">
 
         <button class="sort__btn" aria-label="Ouvrir le menu de tri">
-        <i class="fa-solid fa-arrow-down sort__btn__icon"></i>
+        <i class="fa-solid fa-angle-down sort__btn__icon"></i>
       </button>
 
         <div class="sort__select" >
@@ -54,10 +54,10 @@ class MediaSort {
     const icon = this.$wrapper.querySelector('.sort__btn__icon');
     btn.addEventListener('click', () => {
       menu_footer.classList.toggle('hide');
-      if (icon.classList.contains('fa-arrow-down')) {
-        icon.classList.replace('fa-arrow-down', "fa-arrow-up");
-      } else if (icon.classList.contains('fa-arrow-up')) {
-        icon.classList.replace('fa-arrow-up', "fa-arrow-down");
+      if (icon.classList.contains('fa-angle-down')) {
+        icon.classList.replace('fa-angle-down', "fa-angle-up");
+      } else if (icon.classList.contains('fa-angle-up')) {
+        icon.classList.replace('fa-angle-up', "fa-angle-down");
       }
     })
 
