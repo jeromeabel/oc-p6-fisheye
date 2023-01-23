@@ -7,8 +7,8 @@ Créez un site accessible pour une plateforme de photographes
 ## Mission
 Formation OpenClassrooms
 
-- Moderniser le site web de photographes FishEye en site dynamique avec Javascript
-- Le rendre accessible
+- Moderniser le site web de photographes FishEye en site dynamique avec Javascript : design patterns, json, modale, gallerie, tri
+- Le rendre accessible : focus, navigation au clavier, ARIA
 
 ## Compétences
 - Assurer l'accessibilité d'un site web
