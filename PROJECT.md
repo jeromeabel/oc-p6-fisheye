@@ -5,6 +5,13 @@
 - Client FishEye : site web de photographes freelances avec photos, tirages, contact
 - Mission : moderniser le site web en site dynamique
 
+## Compétences
+- Assurer l'accessibilité d'un site web
+- Gérer les évènements d'un site avec JavaScript
+- Développer une application web modulaire avec des design patterns
+- Ecrire du code JavaScript maintenable
+
+
 ## Cahier des charges
 - Coding rules : fichiers séparés html/css/js, ES6, Eslint/VsCode, Naming, Comments 
 - Responsive : pas besoin
